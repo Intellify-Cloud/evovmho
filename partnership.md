@@ -11,7 +11,7 @@ background: gray
     <h2 class="section-heading">Estate Agent Partnership Programme</h2>
     <p class="section-subheading">More Exposure. More Buyers. More Approved Deals.</p>
     <p class="section-subheading">
-      At Sterling Crest, we believe strong partnerships create stronger results. Our Estate Agent Partnership Programme is designed to help you market your listings more effectively, reach pre-qualified buyers, and close deals faster.
+      We believe strong partnerships create stronger results. Our Estate Agent Partnership Programme is designed to help you market your listings more effectively, reach pre-qualified buyers, and close deals faster.
     </p>
     <p class="section-subheading" style="font-weight: 600;">
       We don't just originate bonds — we help you sell property.
@@ -24,7 +24,7 @@ background: gray
       <i class="fas fa-handshake" aria-hidden="true"></i>
       How Our Estate Agent Partnership Works
     </h3>
-    <p>When you partner with Sterling Crest, we help you:</p>
+    <p>Partner withVM Homeloans Crest for all the help you need:</p>
     <ul class="partnership-benefits-list" style="text-align: left; max-width: 600px; margin: 1rem auto;">
       <li>Market your listings to active buyers</li>
       <li>Promote your brand alongside ours</li>
@@ -41,63 +41,8 @@ background: gray
       Marketing Support for Your Listings
     </h3>
     <p class="text-center" style="margin-bottom: 2rem;">
-      As a Sterling Crest Partner Agent, we help promote your listings through:
+      placehoder copy
     </p>
-
-    <div class="marketing-grid">
-      <!-- Website Exposure Card -->
-      <div class="card">
-        <div class="card-body text-center">
-          <div class="marketing-card__icon">
-            <i class="fas fa-globe" aria-hidden="true"></i>
-          </div>
-          <h4 class="service-heading">Website Exposure</h4>
-          <p class="service-description">Your listings can be promoted on our website with your branding.</p>
-          
-          <div class="marketing-card__features">
-            <p style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.5rem;">Your Agency Logo Appears:</p>
-            <ul class="marketing-card__features-list">
-              <li>"Listing Supported By Sterling Crest"</li>
-            </ul>
-          </div>
-
-          <p style="margin-top: 1rem; font-weight: 600;">
-            This builds credibility and buyer confidence.
-          </p>
-        </div>
-      </div>
-
-      <!-- Social Media Card -->
-      <div class="card">
-        <div class="card-body text-center">
-          <div class="marketing-card__icon">
-            <i class="fab fa-facebook-square" aria-hidden="true"></i>
-          </div>
-          <h4 class="service-heading">Social Media Marketing Support</h4>
-          <p class="service-description">We help market selected listings on our Facebook platform.</p>
-          
-          <div class="marketing-card__features">
-            <p style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.5rem;">Posts May Include:</p>
-            <ul class="marketing-card__features-list">
-              <li>Your listing details</li>
-              <li>Your agency branding</li>
-              <li>Your contact details</li>
-              <li>"Supported by Sterling Crest" branding</li>
-            </ul>
-          </div>
-
-          <div style="margin-top: 1.5rem;">
-            <p style="font-weight: 700; margin-bottom: 0.5rem;">This helps:</p>
-            <ul class="partnership-benefits-list" style="text-align: left; margin: 0.5rem auto 0; max-width: 400px;">
-              <li>Increase listing exposure</li>
-              <li>Drive qualified buyer enquiries</li>
-              <li>Strengthen your brand presence</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Referral Reward -->
   <div class="referral-highlight text-center" style="max-width: 800px; margin: 2rem auto;">
@@ -168,35 +113,7 @@ background: gray
     </div>
   </div>
 
-  <!-- Call to Action -->
-  <div class="partnership-cta text-center" style="max-width: 800px; margin: 2rem auto 0;">
-    <h3 class="service-heading" style="justify-content: center;">
-      <i class="fas fa-rocket" aria-hidden="true"></i>
-      Become a Sterling Crest Partner Agent
-    </h3>
-    
-    <p>If you want to:</p>
-    
-    <ul class="partnership-cta__list" style="text-align: left; max-width: 500px; margin: 1rem auto;">
-      <li>Get more exposure for your listings</li>
-      <li>Work with pre-qualified buyers</li>
-      <li>Partner with a professional bond origination team</li>
-    </ul>
-    
-    <p>Let's work together.</p>
-    
-    <a href="/contact" class="btn">
-      <span>Become a Partner</span>
-      <i class="fas fa-arrow-right" aria-hidden="true"></i>
-    </a>
-    
-    <p style="font-size: 1rem; font-weight: 600; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.2);">
-      Sterling Crest — Supporting Agents. Supporting Buyers. Supporting Successful Property Deals.
-    </p>
-  </div>
   <br>
 <br>
-
-
 
 </div>

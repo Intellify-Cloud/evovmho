@@ -14,7 +14,7 @@ services:
       desc: "We submit Home Loan Applications to up to seven banks negotiating the best interest rates and deal in the market at any given time."
       icon: fas fa-home
       link:
-        url: mailto:minique@mudaulaw.co.za?subject=Mail from evo Sterling Crest website
+        url: mailto:minique@mudaulaw.co.za?subject=Mail from VM Homeloans website
         text: "Email Us"
     - title: "Pre-qualification"
       desc: "We help you check your credit record, income and expenses to give you an accurate assessment of what you can afford. You will then know how likely you are to qualify for a bond."
@@ -26,7 +26,7 @@ services:
       desc: "I'm searching property portals and visiting show houses but have a few questions."
       icon: fas fa-search
       link:
-        url: mailto:minique@mudaulaw.co.za?subject=Mail from evo Sterling Crest website
+        url: mailto:minique@mudaulaw.co.za?subject=Mail from VM Homeloans website
         text: "Email Us"
 
 articles:
@@ -116,8 +116,7 @@ portfolio:
 
 about:
   title: "About Us"
-  text2:
-    "about us copy"
+  text2: "about us copy"
 
 clients:
   title: Bank Partners
@@ -160,7 +159,7 @@ team:
           icon: fas fa-phone
         - url: https://wa.me/27718247820
           icon: fab fa-whatsapp
-        - url: mailto:minique@mudaulaw.co.za?subject=evo Sterling Crest Website Enquiry
+        - url: mailto:minique@mudaulaw.co.za?subject=VM Homeloans Website Enquiry
           icon: fas fa-envelope
         - url: https://www.mudaulaw.co.za
           icon: fas fa-globe
