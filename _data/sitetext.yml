@@ -305,8 +305,8 @@ footer:
   social:
     #- url: https://twitter.com/Angela_macey
     #  icon: "fab fa-twitter"
-    - url: https://www.facebook.com/share/1C9Dt4PnqU/
-      icon: "fab fa-facebook-f"
+    #- url: https://www.facebook.com/share/1C9Dt4PnqU/
+    #  icon: "fab fa-facebook-f"
     #- url: https://za.linkedin.com/in/Angela-macey-homeloans
     #  icon: "fab fa-linkedin-in"
     - url: https://api.whatsapp.com/send?phone=27814063958
