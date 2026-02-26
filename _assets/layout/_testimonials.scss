@@ -1,0 +1,144 @@
+// ======================================================
+// layout/_testimonials.scss – Testimonials Section
+// Clean, modern cards with subtle design system integration
+// ======================================================
+
+.testimonials-section {
+  @include section-padding;
+  background-color: $bg-color-3; // light alternating background
+  position: relative;
+  overflow: hidden;
+
+  // Optional subtle gradient or pattern (much lighter than before)
+  background: linear-gradient(
+    135deg,
+    rgba($primary, 0.03) 0%,
+    rgba($bg-color-3, 1) 50%,
+    rgba($color-btn-2, 0.02) 100%
+  );
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .section-heading {
+    @include heading-2;
+  }
+
+  .section-subheading {
+    @include accent-text; // uses brand color for emphasis
+    font-weight: 500;
+    margin-bottom: $gap-xl;
+  }
+
+  // Grid of testimonial cards
+  .row {
+    justify-content: center;
+    margin-top: $gap-lg;
+  }
+
+  .testimonial-card {
+    @include card-elevated;
+    background: $bg-color-1;
+    padding: 2.25rem 2rem;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+
+    // Quote icon or visual flair (optional)
+    &::before {
+      content: '“';
+      font-size: 6rem;
+      line-height: 1;
+      color: rgba($primary, 0.12);
+      position: absolute;
+      top: -1rem;
+      left: 1.5rem;
+      font-family: serif;
+      pointer-events: none;
+    }
+
+    p {
+      @include body-text;
+      color: $font-color-2;
+      font-style: italic;
+      line-height: 1.7;
+      margin: 0 0 1.5rem;
+      flex: 1;
+      position: relative;
+      z-index: 1;
+    }
+
+    h5 {
+      @include heading-3;
+      margin: 0;
+      font-weight: 700;
+      color: $font-color-1;
+    }
+
+    // Optional company/role line
+    .role {
+      @include muted-text;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+// Fade-in animation (lightweight)
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.testimonial-card {
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: calc(var(--card-index) * 0.1s); // stagger effect if you add style="--card-index: 0" etc.
+}
+
+// ────────────────────────────────────────
+// RESPONSIVE ADJUSTMENTS
+// ────────────────────────────────────────
+@include respond-to(mobile) {
+  .testimonials-section {
+    padding-top: $section-padding-y-mobile;
+    padding-bottom: $section-padding-y-mobile;
+  }
+
+  .testimonial-card {
+    padding: 1.8rem 1.5rem;
+
+    &::before {
+      font-size: 4rem;
+      top: -0.5rem;
+      left: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .row > div {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@include respond-to(desktop) {
+  .row > div {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}

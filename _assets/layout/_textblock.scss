@@ -1,0 +1,235 @@
+/* =========================================================
+   Text Block Section
+*/
+
+.page-section#textblock,
+.page-section[id*="textblock"] {
+  background-color: #ffffff;
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  text-align: center;
+
+  .section-heading {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.75rem;
+    // text-transform: uppercase;
+  }
+
+  .textblock-subheading {
+    max-width: 720px;
+    margin: 0 auto 4rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #6c757d;
+  }
+}
+
+/*  White Card Container */
+
+.textblock-heading {
+  max-width: 900px;
+  margin: 0 auto;
+
+  background: #ffffff;
+  border-radius: 1.25rem;
+
+  padding: clamp(1.75rem, 4vw, 3rem);
+
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.06);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+/* =========================================================
+   Checklist Rows
+========================================================= */
+
+.textblock-heading .row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0 0 1.35rem;
+  max-width: 720px;
+  width: 100%;
+}
+
+.textblock-heading .row:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   Icon Column
+========================================================= */
+
+.textblock-image {
+  flex: 0 0 1.75rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.2rem;
+
+  i {
+    font-size: 1.25rem;
+    color: #01acc8;
+  }
+}
+
+/* =========================================================
+   Text Content
+========================================================= */
+
+.textblock-title {
+  max-width: 720px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* =========================================================
+   Footer Line
+========================================================= */
+
+.text-muted {
+  margin-top: 2.75rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #6c757d;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+/* =========================================================
+   Responsive Refinements
+========================================================= */
+
+@media (max-width: 768px) {
+  .textblock-heading {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .textblock-title {
+    font-size: 1rem;
+  }
+
+  .textblock-heading .row {
+    gap: 0.75rem;
+    max-width: 100%;
+  }
+}
+
+
+/* ======================================================
+   layout/_textblock.scss – Text Block / Features List
+====================================================== */
+
+.textblock-section {
+  @include section-padding;
+  background-color: $bg-color-3;
+
+  .container {
+    max-width: 1100px;
+  }
+
+  .section-heading {
+    @include heading-2;
+    text-transform: none;
+  }
+
+  .textblock-subheading {
+    @include muted-text;
+    max-width: 720px;
+    margin: 0 auto $gap-xl auto;
+    text-align: center;
+  }
+
+  .textblock-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .textblock-item {
+    display: flex;
+    align-items: flex-start;
+    gap: $gap-lg;
+    margin-bottom: $gap-xl;
+    padding: $gap-md;
+    border-radius: $border-radius;
+    background: $bg-color-1;
+    box-shadow: $shadow-sm;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-md;
+      background: rgba($primary, 0.02);
+    }
+
+    .textblock-icon {
+      flex: 0 0 60px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      color: $primary;
+      background: rgba($primary, 0.08);
+      border-radius: $border-radius-sm;
+    }
+
+    .textblock-title-wrapper {
+      flex: 1;
+
+      .textblock-title {
+        @include heading-3;
+        margin: 0 0 0.5rem;
+        color: $font-color-1;
+        line-height: 1.4;
+      }
+
+      .textblock-desc {
+        @include body-text;
+        color: $font-color-3;
+        margin: 0;
+      }
+    }
+  }
+
+  .textblock-footer {
+    @include muted-text;
+    text-align: center;
+    margin-top: $gap-xl;
+    font-style: italic;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* ======================================================
+   RESPONSIVE ADJUSTMENTS
+====================================================== */
+
+@include respond-to(mobile) {
+  .textblock-section {
+    padding-top: $section-padding-y-mobile;
+    padding-bottom: $section-padding-y-mobile;
+  }
+
+  .textblock-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: $gap-md;
+    padding: $gap-md 1.25rem;
+
+    .textblock-icon {
+      margin-bottom: 0.75rem;
+    }
+  }
+}

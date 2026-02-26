@@ -1,0 +1,315 @@
+header:
+  text: "Welcome to our new home"
+  title: ""
+
+site:
+  description: ""
+
+services:
+  title: "Services We Offer"
+  text: "We get you the most competitive rate by sourcing quotes from the banks for you to compare."
+  section: services
+  list:
+    - title: "Bond Origination"
+      desc: "We submit Home Loan Applications to up to seven banks negotiating the best interest rates and deal in the market at any given time."
+      icon: fas fa-home
+      link:
+        url: mailto:minique@mudaulaw.co.za?subject=Mail from evo Sterling Crest website
+        text: "Email Us"
+    - title: "Pre-qualification"
+      desc: "We help you check your credit record, income and expenses to give you an accurate assessment of what you can afford. You will then know how likely you are to qualify for a bond."
+      icon: fas fa-tasks
+      link:
+        url: tel:+277182478208
+        text: "Call Us"
+    - title: "Have Questions?"
+      desc: "I'm searching property portals and visiting show houses but have a few questions."
+      icon: fas fa-search
+      link:
+        url: mailto:minique@mudaulaw.co.za?subject=Mail from evo Sterling Crest website
+        text: "Email Us"
+
+articles:
+  title: "Articles"
+  text: "Here is a list of our articles that can help inform you about news in homeloans, interest rates and the South African property market."
+  section: articles
+
+calculators:
+  title: "Home Loan Calculators"
+  text: "Use our calculators to work out the size of home loan you are likely to qualify for and what your bond repayments will be."
+  section: calculators
+  list:
+    - title: "Bond Calculator"
+      desc: "Calculate the home loan you qualify for."
+      icon: fas fa-calculator
+      link:
+        url: /affordability-calculator
+        text: "Calculate"
+    - title: "Repayment Calculator"
+      desc: "Calculate your monthly bond repayments."
+      icon: fas fa-calculator
+      link:
+        url: /bond-calculator
+        text: "Calculate"
+    - title: "Transfer Cost Calculator"
+      desc: "Calculate your registration and transfer costs."
+      icon: fas fa-calculator
+      link:
+        url: /transfer-cost-calculator
+        text: "Calculate"
+
+more-calculators:
+  title: "More Calculators"
+  text: "These calculators help you understand your loan repayments, plan your deposit savings, and see how extra payments can shorten your mortgage term."
+  section: more-calculators
+  list:
+    - title: "Amortisation Calculator"
+      desc: "Calculate how your repayment is structured."
+      icon: fas fa-calculator
+      link:
+        url: /amortisation-calculator
+        text: "Calculate"
+    - title: "Deposit Savings Calculator"
+      desc: "Calculate how much you need to save for your deposit."
+      icon: fas fa-calculator
+      link:
+        url: /deposit-savings-calculator
+        text: "Calculate"
+    - title: "Additional Payment Calculator"
+      desc: "Calculate your savings on your total home loan cost by paying a little extra into your bond."
+      icon: fas fa-calculator
+      link:
+        url: /additional-payment-calculator
+        text: "Calculate"
+
+textblock:
+  title: "Why Sterling Crest"
+  text: "Most people don’t get rejected by banks…<br>They get rejected because their application is wrong."
+  footer: "At Sterling Crest KZN, we ENGINEER your bond application so it gets approved."
+  section: textblock
+  list:
+    - title: "We know exactly which banks fit your profile"
+      image: "fa-check-circle"
+    - title: "We structure your income to strengthen approval"
+      image: "fa-check-circle"
+    - title: "We remove risk flags before they become deal-breakers"
+      image: "fa-check-circle"
+    - title: "We negotiate better rates and faster approvals"
+      image: "fa-check-circle"
+    - title: "We arrange tailored insurance to protect your investment and family"
+      image: "fa-check-circle"
+
+textblock-lite:
+  title: "Get home loan quotes from all the <br> banks with one application."
+  text: "Get pre-approved today."
+  footer: "Our Bond Origination services are at no cost to you."
+  section: textblock-lite
+  list:
+    - title: ""
+      image: ""
+
+portfolio:
+  title: "Other Services"
+  text: "Some of our work"
+  section: portfolio
+  closebutton: "Close"
+
+about:
+  title: "About Us"
+  text2:
+    "about us copy"
+
+clients:
+  title: Bank Partners
+  section: clients
+  max-height: 120px
+  horizontal-scrolling: ""
+  list:
+    - title: "ABSA"
+      url: https://www.absa.co.za
+      logo: assets/img/clients/absa-bw.png
+    - title: "FNB"
+      url: https://www.fnb.co.za/
+      logo: assets/img/clients/fnb-bw-n.png
+    - title: "Housing Investment Partners"
+      url: https://www.hiphousing.co.za/
+      logo: assets/img/clients/hip.jpg
+    - title: "Investec"
+      url: https://www.investec.co.za/
+      logo: assets/img/clients/investec-bw.png
+    - title: "Rand Merchant Bank"
+      url: https://www.rmb.co.za
+      logo: assets/img/clients/rmb-img-n.png
+    - title: "Nedbank"
+      url: https://www.nedbank.co.za
+      logo: assets/img/clients/nedbank-bw.png
+    - title: "Standard Bank"
+      url: https://www.standardbank.co.za/
+      logo: assets/img/clients/SBSA-bw.png
+
+team:
+  title: "The Team"
+  section: team
+  contact:
+  people:
+    - name: "Minique Vermaak"
+      role: "Director & Conveyancer"
+      image: assets/img/team/profile-f.jpg
+      social:
+        - url: tel:+27718247820
+          icon: fas fa-phone
+        - url: https://wa.me/27718247820
+          icon: fab fa-whatsapp
+        - url: mailto:minique@mudaulaw.co.za?subject=evo Sterling Crest Website Enquiry
+          icon: fas fa-envelope
+        - url: https://www.mudaulaw.co.za
+          icon: fas fa-globe
+
+testimonials:
+  title: "Testimonials"
+  text: "What Others Say About Us"
+  section: testimonials
+  people:
+    - name: ""
+      testimony: ""
+
+document_download:
+  title: "Home Loan Application Form"
+  subheading: "Overview"
+  description: "This document contains the Financial and Consent sections of your home loan application. Please review the details and download the PDF for your records."
+  button_text: "Download PDF"
+  file_url: "/assets/files/home-loan-application-sections-h-j.pdf"
+  file_name: "home-loan-application-sections-h-j.pdf"
+  version: "Version 1.5"
+  updated: "Updated 24 Feb 2025"
+
+# ======================================================
+# Sample data structure for partnership section
+# File: _data/sitetext.yml (partnership section)
+# ======================================================
+
+partnership:
+  section: "partnership"
+  title: "Estate Agent Partnership Programme"
+  tagline: "More Exposure. More Buyers. More Approved Deals."
+  intro: "At Sterling Crest, we believe strong partnerships create stronger results. Our Estate Agent Partnership Programme is designed to help you market your listings more effectively, reach pre-qualified buyers, and close deals faster."
+  mission: "We don't just originate bonds — we help you sell property."
+
+  # How It Works Section
+  how_title: "How Our Estate Agent Partnership Works"
+  how_intro: "When you partner with Sterling Crest, we help you:"
+  benefits:
+    - "Market your listings to active buyers"
+    - "Promote your brand alongside ours"
+    - "Support your buyers with fast, professional bond pre-approvals"
+    - "Help improve deal success rates"
+    - "Keep you informed throughout the bond process"
+
+  # Marketing Support Section
+  marketing_title: "Marketing Support for Your Listings"
+  marketing_intro: "As a Sterling Crest Partner Agent, we help promote your listings through:"
+
+  # Website Card
+  website_card:
+    title: "Website Exposure"
+    description: "Your listings can be promoted on our website with your branding."
+    features_title: "Your Agency Logo Appears:"
+    features:
+      - '"Listing Supported By Sterling Crest"'
+    benefit: "This builds credibility and buyer confidence."
+
+  # Social Media Card
+  social_card:
+    title: "Social Media Marketing Support"
+    description: "We help market selected listings on our Facebook platform."
+    posts_title: "Posts May Include:"
+    post_items:
+      - "Your listing details"
+      - "Your agency branding"
+      - "Your contact details"
+      - '"Supported by Sterling Crest" branding'
+    helps_title: "This helps:"
+    helps:
+      - "Increase listing exposure"
+      - "Drive qualified buyer enquiries"
+      - "Strengthen your brand presence"
+
+  # Referral Reward Section
+  referral:
+    title: "Referral Reward"
+    text: "When you refer buyers to Sterling Crest and the bond is successfully approved and registered:"
+    reward: "👉 You may qualify for referral rewards (where applicable and compliant)."
+    note: "(Structured within industry and regulatory guidelines.)"
+
+  # Why Partner Section
+  why_partner:
+    title: "Why Estate Agents Partner With Sterling Crest"
+    reasons:
+      - "Faster buyer pre-approvals"
+      - "Better-qualified buyers viewing your listings"
+      - "Increased marketing exposure"
+      - "Professional, reliable communication"
+      - "Higher deal success rates"
+      - "Strong client service (which reflects on you)"
+
+  # Ethics Section
+  ethics:
+    title: "Professional & Ethical Approach"
+    respect: "We respect your client relationships."
+    support: "We support your sale — we never compete for your client."
+    goal_title: "Our goal is simple:"
+    goals:
+      - "Help you close more deals"
+      - "Help your buyers secure finance smoothly"
+      - "Help you grow your brand presence"
+
+  # Call to Action
+  cta:
+    title: "Become a Sterling Crest Partner Agent"
+    intro: "If you want to:"
+    wants:
+      - "Get more exposure for your listings"
+      - "Work with pre-qualified buyers"
+      - "Partner with a professional bond origination team"
+    action: "Let's work together."
+    button_text: "Find Out More"
+    button_link: "/partnership"
+    tagline: "Sterling Crest — Supporting Agents. Supporting Buyers. Supporting Successful Property Deals."
+
+referral:
+  title: "Refer & Earn"
+  text: "Refer someone looking to buy a home and <strong>earn R1,000</strong> when their bond is approved and registered."
+  section: referral
+  image: assets/img/referral/refer.jpg
+  image_alt: "Happy coupladyle looking at a phone"
+  steps:
+    - icon: "fas fa-user-friends"
+      text: "Refer a friend<br>or client"
+    - icon: "fas fa-home"
+      text: "They apply,<br>for a home loan"
+    - icon: "fas fa-money-bill-wave"
+      text: "You get<br><strong>R1,000</strong>"
+  button:
+    url: "https://api.whatsapp.com/send"
+    phone: "27814063958"
+    text: "Hi Jane, I would like to refer someone. Name: | Contact:"
+    button_text: "Refer via Whatsapp"
+
+contact:
+  title: "Contact Us"
+  text: ""
+  section: team
+
+footer:
+  legal: "Powered by evo Homeloans"
+  social:
+    #- url: https://twitter.com/Angela_macey
+    #  icon: "fab fa-twitter"
+    - url: https://www.facebook.com/share/1C9Dt4PnqU/
+      icon: "fab fa-facebook-f"
+    #- url: https://za.linkedin.com/in/Angela-macey-homeloans
+    #  icon: "fab fa-linkedin-in"
+    - url: https://api.whatsapp.com/send?phone=27814063958
+      icon: "fab fa-whatsapp"
+    # - url: https://instagram.com
+    #   icon: "fab fa-instagram"

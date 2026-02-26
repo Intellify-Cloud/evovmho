@@ -1,0 +1,44 @@
+<!-- Text Block -->
+<section class="textblock-section page-section" id="{{ site.data.sitetext.textblock.section | default: 'textblock' }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">{{ site.data.sitetext.textblock.title | default: "Text Text-Block" }}
+        </h2>
+        {% if site.data.sitetext.textblock.text %}
+        <h3 class="textblock-subheading text-muted">{{ site.data.sitetext.textblock.text }}</h3>
+        {% endif %}
+      </div>
+    <div class="text-center">
+      <h2 class="section-heading">{{ site.data.sitetext.textblock.title | default: "Why Choose Us" }}</h2>
+      {% if site.data.sitetext.textblock.text %}
+        <p class="textblock-subheading">{{ site.data.sitetext.textblock.text }}</p>
+      {% endif %}
+    </div>
+
+    <div class="textblock-content">
+      {% for item in site.data.sitetext.textblock.list %}
+        <div class="textblock-item">
+          {% if item.image %}
+            <div class="textblock-icon">
+              <i class="fas {{ item.image }} fa-2x"></i>
+            </div>
+          {% endif %}
+          <div class="textblock-title-wrapper">
+            <h3 class="textblock-title">{{ item.title }}</h3>
+            {% if item.desc %}
+              <p class="textblock-desc">{{ item.desc | markdownify }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if site.data.sitetext.textblock.footer %}
+      <div class="textblock-footer">
+        {{ site.data.sitetext.textblock.footer | markdownify }}
+      </div>
+    {% endif %}
+  </div>
+</section>
+<!-- End Text Block -->

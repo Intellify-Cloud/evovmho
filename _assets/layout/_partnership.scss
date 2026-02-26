@@ -1,0 +1,403 @@
+// ======================================================
+// layout/_partnership.scss
+// Estate Agent Partnership Programme section
+// Fully uses centralized design tokens & mixins
+// ======================================================
+
+.partnership-section {
+  @include section-padding;
+  background: $bg-color-1;
+
+  // Alternate background variant
+  &--alt {
+    background: $bg-color-3;
+  }
+}
+
+// ────────────────────────────────────────
+// Hero / Header Area - uses standard section classes
+// ────────────────────────────────────────
+
+// ────────────────────────────────────────
+// How It Works Section
+// ────────────────────────────────────────
+.partnership-how {
+  max-width: 900px;
+  margin: $gap-lg auto;
+  padding: $gap-lg;
+  background: linear-gradient(135deg, rgba($primary, 0.03) 0%, rgba($color-btn-2, 0.02) 100%);
+  border-radius: $border-radius;
+  border-left: 4px solid $primary;
+  
+  .service-heading {
+    margin-bottom: $gap-md;
+    display: flex;
+    align-items: center;
+    gap: $gap-sm;
+
+    i {
+      color: $primary;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.partnership-benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    @include body-text;
+    font-size: 0.95rem;
+    padding: $gap-sm 0;
+    display: flex;
+    align-items: flex-start;
+    gap: $gap-sm;
+
+    &::before {
+      content: '✔';
+      color: $color-btn-2;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+  }
+}
+
+// ────────────────────────────────────────
+// Marketing Support Cards
+// ────────────────────────────────────────
+.marketing-section {
+  margin: $gap-lg 0;
+  
+  .service-heading {
+    margin-bottom: $gap-lg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $gap-sm;
+
+    i {
+      color: $color-btn-2;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.marketing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gap-lg;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .card {
+    border-top: 3px solid $primary;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $shadow-xl;
+      border-top-color: $color-btn-2;
+    }
+  }
+}
+
+.marketing-card__icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, rgba($primary, 0.1) 0%, rgba($color-btn-2, 0.05) 100%);
+  border-radius: $border-radius-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin: 0 auto $gap-md;
+
+  i {
+    font-size: 1.4rem;
+    color: $primary;
+  }
+}
+
+// Keep only features styling
+
+.marketing-card__features {
+  background: rgba($primary, 0.03);
+  border-radius: $border-radius-sm;
+  padding: $gap-sm $gap-md;
+  margin-bottom: $gap-sm;
+}
+
+.marketing-card__features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    @include body-text;
+    font-size: 0.95rem;
+    color: $font-color-2;
+    padding: 0.35rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+
+    &::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: $primary;
+      font-weight: 700;
+    }
+  }
+}
+
+// ────────────────────────────────────────
+// Referral Reward Highlight
+// ────────────────────────────────────────
+.referral-highlight {
+  max-width: 800px;
+  margin: $gap-lg auto;
+  padding: $gap-lg;
+  background: linear-gradient(135deg, rgba($color-btn-2, 0.08) 0%, rgba($primary, 0.05) 100%);
+  border-radius: $border-radius;
+  border: 2px solid rgba($color-btn-2, 0.2);
+  text-align: center;
+  
+  .service-heading {
+    margin-bottom: $gap-sm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $gap-sm;
+
+    i {
+      color: $color-btn-2;
+    }
+  }
+}
+
+.referral-highlight__icon {
+  font-size: 2.5rem;
+  color: $color-btn-2;
+  margin-bottom: $gap-sm;
+}
+
+// ────────────────────────────────────────
+// Why Partner Section
+// ────────────────────────────────────────
+.why-partner {
+  max-width: 900px;
+  margin: $gap-lg auto;
+  
+  .service-heading {
+    margin-bottom: $gap-lg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $gap-sm;
+
+    i {
+      color: $color-btn-2;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gap-sm;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gap-md;
+  }
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: $gap-sm;
+  padding: $gap-sm;
+  background: $bg-color-1;
+  border-radius: $border-radius-sm;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba($primary, 0.02);
+    transform: translateX(2px);
+  }
+
+  &::before {
+    content: '✔';
+    color: $color-btn-2;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  span {
+    @include body-text;
+    font-size: 0.95rem;
+    color: $font-color-2;
+    line-height: 1.5;
+  }
+}
+
+// ────────────────────────────────────────
+// Ethics Section
+// ────────────────────────────────────────
+.ethics-section {
+  max-width: 800px;
+  margin: $gap-lg auto;
+  padding: $gap-lg;
+  background: $bg-color-1;
+  border-radius: $border-radius;
+  border: 2px solid rgba($primary, 0.15);
+  
+  .service-heading {
+    margin-bottom: $gap-md;
+    display: flex;
+    align-items: center;
+    gap: $gap-sm;
+
+    i {
+      color: $primary;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.ethics-goals {
+  background: rgba($primary, 0.03);
+  border-radius: $border-radius-sm;
+  padding: $gap-md;
+  margin-top: $gap-md;
+}
+
+.ethics-goals-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    @include body-text;
+    font-size: 0.95rem;
+    padding: 0.35rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: $gap-sm;
+
+    &::before {
+      content: '👉';
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+  }
+}
+
+// ────────────────────────────────────────
+// CTA Section
+// ────────────────────────────────────────
+.partnership-cta {
+  max-width: 700px;
+  margin: $gap-lg auto 0;
+  padding: $gap-lg;
+  background: linear-gradient(135deg, $primary 0%, darken($primary, 8%) 100%);
+  border-radius: $border-radius;
+  text-align: center;
+  color: white;
+  box-shadow: $shadow-xl;
+  
+  .service-heading {
+    color: white;
+    margin-bottom: $gap-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $gap-sm;
+
+    i {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .btn {
+    @include btn-accent;
+    font-size: 1.05rem;
+    padding: 0.85rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: $gap-sm;
+    
+    i {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover i {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.partnership-cta__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 $gap-md;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  li {
+    @include body-text;
+    font-size: 0.95rem;
+    color: rgba(white, 0.95);
+    padding: 0.35rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: $color-btn-2;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// ────────────────────────────────────────
+// Responsive Adjustments
+// ────────────────────────────────────────
+@include respond-to(mobile-only) {
+  .partnership-how,
+  .referral-highlight,
+  .ethics-section,
+  .partnership-cta {
+    padding: $gap-md;
+  }
+
+  .service-heading {
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+  }
+  
+  .marketing-card__icon {
+    width: 40px;
+    height: 40px;
+    
+    i {
+      font-size: 1.2rem;
+    }
+  }
+}

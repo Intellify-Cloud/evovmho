@@ -1,0 +1,160 @@
+// ======================================================
+// layout/_team.scss – Team Section
+// Clean Material cards + consistent hover & social styling
+// ======================================================
+
+.team-section {
+  @include section-padding;
+  background-color: $bg-color-2; // light neutral background
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .section-heading {
+    @include heading-2;
+    margin-bottom: $gap-xl;
+  }
+
+  // Main team grid
+  .row {
+    justify-content: center;
+    margin-top: $gap-lg;
+  }
+
+  .team-member {
+    @include card-elevated;
+    background: $bg-color-1;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: $shadow-xl;
+      border-color: rgba($primary, 0.2);
+    }
+
+    img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: $gap-lg;
+      border: 5px solid $bg-color-3;
+      box-shadow: $shadow-md;
+      transition: all 0.4s ease;
+
+      &:hover {
+        transform: scale(1.06);
+      }
+    }
+
+    h4 {
+      @include heading-3;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+    }
+
+    p.text-muted {
+      @include muted-text;
+      margin: 0 0 1.5rem;
+      font-size: 1rem;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: auto; // pushes icons to bottom if card height varies
+
+      .list-inline-item {
+        margin: 0;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 48px;
+          height: 48px;
+          background: $bg-color-3;
+          color: $font-color-3;
+          border-radius: 50%;
+          font-size: 1.25rem;
+          transition: all 0.3s ease;
+          text-decoration: none;
+
+          &:hover {
+            background: $primary;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: $shadow-md;
+          }
+        }
+      }
+    }
+  }
+
+  // Subtext / paragraph below team grid
+  .subtext {
+    @include body-text;
+    color: $font-color-3;
+    max-width: 720px;
+    margin: $gap-xl auto 0;
+    text-align: center;
+    line-height: 1.8;
+  }
+}
+
+// ────────────────────────────────────────
+// RESPONSIVE ADJUSTMENTS
+// ────────────────────────────────────────
+@include respond-to(mobile) {
+  .team-section {
+    padding-top: $section-padding-y-mobile;
+    padding-bottom: $section-padding-y-mobile;
+  }
+
+  .team-member {
+    padding: 2rem 1.5rem;
+
+    img {
+      width: 140px;
+      height: 140px;
+      margin-bottom: $gap-md;
+    }
+
+    h4 {
+      font-size: 1.4rem;
+    }
+
+    .social-buttons {
+      gap: 0.8rem;
+
+      a {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .row > div {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@include respond-to(desktop) {
+  .row > div {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}

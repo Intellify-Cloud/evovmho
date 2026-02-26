@@ -1,0 +1,261 @@
+@charset "utf-8";
+
+// 1. Bootstrap core imports (must come first)
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+// 2. Our design tokens & helpers (override Bootstrap vars here)
+@import "base/variables";
+@import "base/mixins";
+
+// Apply overrides AFTER variables but BEFORE full Bootstrap
+$body-bg:               $bg-color-2;
+$body-color:            $font-color-2;
+$font-family-sans-serif: $font-family-base;
+$headings-font-family:  $font-family-heading;
+$headings-color:        $font-color-1;
+
+$primary:               $color-btn-1;
+$secondary:             $color-btn-3;
+
+$border-radius:         $border-radius;
+$border-radius-sm:      $border-radius-sm;
+$border-radius-lg:      $border-radius;
+
+$enable-rounded:        true;
+$enable-shadows:        true;
+$enable-gradients:      false;
+
+$card-border-radius:    $border-radius;
+$card-box-shadow:       $shadow-md;
+
+$btn-border-radius:     $border-radius-pill;
+$btn-font-weight:       600;
+
+// 3. Full Bootstrap with overrides applied
+@import "bootstrap/scss/bootstrap";
+
+// 4. Global resets & base styles
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: 1.7;
+  color: $font-color-2;
+  background-color: $body-bg;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba($primary, 0.2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  color: $font-color-1;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: $color-btn-1-hover;
+    text-decoration: underline;
+  }
+}
+
+// Better focus states
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba($primary, 0.2);
+}
+
+// Consistent centering & text width across sections
+.page-section {
+  .section-heading,
+  .section-subheading {
+    text-align: center;
+  }
+
+  .container > .row,
+  .container > div {
+    justify-content: center;
+  }
+
+  // Optimal readable width for body text
+  .large.text-muted,
+  .text-muted,
+  p,
+  .about-content,
+  .textblock-content,
+  .card-description,
+  .calculator-desc,
+  .about-content .large.text-muted {
+    max-width: 65ch;                    // ← Changed from 820px to modern readable width
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 1.75;
+  }
+
+  // Fix any lingering left alignment
+  .text-left,
+  [class*="col-"] > .text-left {
+    text-align: center !important;
+  }
+}
+
+// 5. Custom components & layouts
+@import "components/buttons";
+@import "components/navbar";
+
+// Layout sections
+@import "layout/hero";
+@import "layout/services";
+@import "layout/about";
+@import "layout/team";
+@import "layout/clients";
+@import "layout/testimonials";
+@import "layout/calculators";
+@import "layout/referral";
+@import "layout/textblock";
+@import "layout/textblock-lite";
+@import "layout/partnership";
+@import "layout/download";
+@import "layout/contact";
+@import "layout/footer";
+
+// 6. Page-specific / utility overrides
+.post {
+  max-width: 780px;
+  margin: $gap-xl auto 0;
+  padding: 0 1rem;
+}
+
+// Calculator iframe base
+iframe[class$="-calc"] {
+  display: block;
+  width: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+// Original calculator height overrides
+.bond-calc          { height: 1050px; }
+.afford-calc        { height: 1500px; }
+.transfer-calc      { height: 1850px; }
+.deposit-calc       { height: 1500px; }
+.amortisation-calc  { height: 1000px; }
+.additional-payment-calc { height: 1000px; }
+
+@media (max-width: 640px) {
+  .bond-calc          { height: 1400px; }
+  .afford-calc        { height: 1800px; }
+  .transfer-calc      { height: 2700px; }
+  .deposit-calc       { height: 1800px; }
+  .amortisation-calc  { height: 1400px; }
+  .additional-payment-calc { height: 1800px; }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .bond-calc          { height: 1200px; }
+  .afford-calc        { height: 1650px; }
+  .transfer-calc      { height: 2000px; }
+}
+
+// Floating WhatsApp Button
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    background: #25D366; // WhatsApp green
+    color: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background: #20b858;
+    }
+
+    i {
+      font-size: 2.2rem;
+    }
+
+    // Tooltip on hover
+    .tooltip {
+      position: absolute;
+      right: 80px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $font-color-1;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      pointer-events: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    &:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+      right: 75px;
+    }
+  }
+
+  // Pulse animation (optional - subtle attention grabber)
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+  }
+
+  a {
+    animation: pulse 2s infinite;
+  }
+}
+
+// Make sure it doesn't overlap footer on very small screens
+@media (max-width: 576px) {
+  .whatsapp-float {
+    bottom: 80px; // give space above mobile footer
+    right: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .about-section .container {
+    max-width: 1240px !important;
+  }
+  
+  .about-section .col-lg-9 {
+    max-width: 80% !important;
+    flex: 0 0 80% !important;
+  }
+}

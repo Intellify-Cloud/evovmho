@@ -1,0 +1,46 @@
+<section class="document-download-section" id="document-download">
+  <div class="container">
+    <div class="document-card icon-navy">
+      <div class="card-grid">
+
+        <!-- LEFT COLUMN: Icon + Button + Meta -->
+        <div class="left-column">
+          <div class="document-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7 18h10v-2H7v2zM17 14H7v-2h10v2zM7 10h4V8H7v2z"/>
+              <path d="M6 2c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
+            </svg>
+          </div>
+
+          <a href="/assets/docs/evo_loan_form.pdf"
+             class="btn btn-download"
+             download="evo_loan_form.pdf">
+            {{ site.data.sitetext.document_download.button_text | default: "Download PDF" }}
+          </a>
+
+          <div class="document-meta">
+            <span>{{ site.data.sitetext.document_download.version | default: "Version 1.5" }}</span>
+            <span class="meta-divider">•</span>
+            <span>{{ site.data.sitetext.document_download.updated | default: "Updated 24 Feb 2025" }}</span>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Title + Subheading + Description -->
+        <div class="right-column">
+          <h2 class="document-title">
+            {{ site.data.sitetext.document_download.title | default: "Home Loan Application Financial & Consent Sections" }}
+          </h2>
+
+          <h3 class="document-subheading">
+            {{ site.data.sitetext.document_download.subheading | default: "Overview" }}
+          </h3>
+
+          <p class="document-description">
+            {{ site.data.sitetext.document_download.description | default: "This document contains the Financial and Consent sections of your home loan application. Please review the details and download the PDF for your records." }}
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

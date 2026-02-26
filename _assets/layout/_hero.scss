@@ -1,0 +1,149 @@
+// ======================================================
+// layout/_hero.scss – Modern Hero / Masthead
+// Material-inspired + Golden Ratio proportions
+// ======================================================
+
+header.masthead {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  height: 90vh;
+  text-align: center;
+  color: white;
+  background-image: url("#{$header-image}");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  // Darker overlay for better text contrast (modern trend)
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55); // deep slate overlay – works with $font-color-1
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    padding: 0 1.5rem;
+    width: 100%;
+  }
+
+  .intro-text {
+    @include center-content;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: $gap-lg;           // golden-ratio-aware spacing
+  }
+
+  .intro-lead-in {
+    @include muted-text;
+    font-style: italic;
+    color: rgba(white, 0.9);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+  }
+
+  .intro-heading {
+    @include heading-1;
+    color: white;
+    text-shadow: 0 4px 16px rgba(0,0,0,0.7);
+    margin: 0;
+  }
+
+  // Call-to-action button – using our new btn-primary mixin
+  .btn-xl,
+  .btn-primary {
+    @include btn-primary;
+    padding: 1.1rem 2.6rem;
+    font-size: 1.25rem;
+    margin-top: $gap-md;
+    box-shadow: $shadow-lg;
+  }
+
+  // Optional subtle content card/elevation effect (Material feel)
+  .intro-content-wrapper {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border-radius: $border-radius;
+    padding: $gap-xl;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: $shadow-md;
+  }
+}
+
+// ────────────────────────────────────────
+// RESPONSIVE BREAKPOINTS
+// ────────────────────────────────────────
+@include respond-to(mobile) {
+  header.masthead {
+    min-height: 70vh;
+    height: 85vh;
+    align-items: center;
+  }
+
+  .intro-text {
+    padding: 0 1rem;
+    gap: $gap-md;
+  }
+
+  .intro-heading {
+    font-size: clamp(2.4rem, 8vw, 3.8rem);
+    line-height: 1.15;
+  }
+
+  .intro-lead-in {
+    font-size: clamp(1.2rem, 4.5vw, 1.7rem);
+  }
+
+  .btn-xl,
+  .btn-primary {
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+@include respond-to(tablet) {
+  header.masthead {
+    height: 85vh;
+  }
+
+  .intro-heading {
+    font-size: clamp(3.2rem, 7vw, 5rem);
+  }
+
+  .intro-lead-in {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+  }
+}
+
+@include respond-to(desktop) {
+  header.masthead {
+    height: 80vh;
+    min-height: 70vh;
+  }
+
+  .intro-heading {
+    font-size: clamp(4.5rem, 7vw, 6.5rem);
+  }
+
+  .intro-lead-in {
+    font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+  }
+}
+
+// Extra-large screens
+@media (min-width: 1400px) {
+  header.masthead {
+    height: 75vh;
+  }
+
+  .intro-heading {
+    font-size: clamp(5rem, 6vw, 7.5rem);
+  }
+}

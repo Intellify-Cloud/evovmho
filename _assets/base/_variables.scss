@@ -1,0 +1,109 @@
+// ======================================================
+// CENTRAL DESIGN TOKENS – _variables.scss
+// Material + Golden Ratio + Your Teal Brand
+// ======================================================
+
+// Golden Ratio
+$phi: 1.6180339887;
+$phi-inverse: 0.6180339887;
+
+// ======================================================
+// 1. TYPOGRAPHY
+// ======================================================
+$font-family-base:    'Comfortaa', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$font-family-heading: 'Comfortaa', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+$font-size-base:      1.0625rem; // 17px – slightly larger for modern readability
+
+// ======================================================
+// Images / Assets
+// ======================================================
+$header-image: "/_assets/img/hero.jpg" !default;
+$contact-image: "/_assets/img/contact.png" !default;  // if you still use this one
+
+// Text colors (exactly the 4 you asked for)
+$font-color-1: #0F172A;   // Primary (headings, strong text)
+$font-color-2: #334155;   // Secondary (body, subheadings)
+$font-color-3: #64748B;   // Muted (captions, less important)
+$font-color-4: #00ACC8;   // Accent (links, highlights, CTAs)
+
+// ======================================================
+// 2. BUTTON / TRIM / HIGHLIGHT COLORS (4 that complement)
+// ======================================================
+$color-btn-1: #00ACC8;    // Primary (your brand teal)
+$color-btn-2: #FF7043;    // Accent / Highlight (coral-orange – strong contrast, energetic)
+$color-btn-3: #455A64;    // Secondary / Trim (deep slate – professional)
+$color-btn-4: #00C853;    // Success / Positive (green – trust in finance)
+
+// Hover variants (auto-darkened)
+$color-btn-1-hover: #00838F;
+$color-btn-2-hover: #F4511E;
+$color-btn-3-hover: #37474F;
+$color-btn-4-hover: #00B140;
+
+// ======================================================
+// 3. BACKGROUND COLORS (4 that work with everything above)
+// ======================================================
+$bg-color-1: #FFFFFF;     // Pure white (cards, hero content)
+$bg-color-2: #F8FAFC;     // Very light cool gray (default sections)
+$bg-color-3: #F1F5F9;     // Slightly deeper (alternating sections)
+$bg-color-4: #000000;     // Very light teal tint (subtle brand background)
+
+// ======================================================
+// SPACING & LAYOUT (Golden Ratio based)
+// ======================================================
+$base-spacing: 1.5rem;
+$spacer:       $base-spacing;
+
+$section-padding-y: $base-spacing * 4;           // ~6rem desktop
+$section-padding-y-mobile: $base-spacing * 3;    // ~4.5rem mobile
+
+// Common gaps
+$gap-sm: $base-spacing * $phi-inverse;   // ~0.93rem
+$gap-md: $base-spacing;
+$gap-lg: $base-spacing * $phi;           // ~2.43rem
+$gap-xl: $base-spacing * $phi * 1.5;     // ~3.7rem
+
+// ======================================================
+// BORDERS, SHADOWS & MODERN MATERIAL FEEL
+// ======================================================
+$border-radius:       16px;   // Modern rounded (was 0)
+$border-radius-sm:    12px;
+$border-radius-pill:  9999px; // Buttons, pills
+
+$shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+$shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+
+// ======================================================
+// BOOTSTRAP OVERRIDES (place these BEFORE importing Bootstrap)
+// ======================================================
+$body-bg:               $bg-color-2;
+$body-color:            $font-color-1;
+$font-family-sans-serif: $font-family-base;
+$headings-font-family:  $font-family-heading;
+$headings-font-weight:  700;
+
+$primary:               $color-btn-1;
+$secondary:             $color-btn-3;
+
+$border-radius:         $border-radius;
+$border-radius-sm:      $border-radius-sm;
+$enable-rounded:        true;
+$enable-shadows:        true;
+$enable-gradients:      false;
+
+$input-border-radius:   $border-radius-sm;
+$btn-border-radius:     $border-radius-pill;
+$btn-font-weight:       600;
+
+// Card styling (very Material)
+$card-border-radius:    $border-radius;
+$card-border-width:     0;
+$card-box-shadow:       $shadow-md;
+
+// Section heading style (consistent across site)
+$section-heading-color: $font-color-1;
+
+$header-image: "../img/hero.jpg" !default;

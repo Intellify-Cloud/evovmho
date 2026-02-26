@@ -1,0 +1,50 @@
+.textblock-lite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .btn-textblock-lite {
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.75rem 0.5rem;
+
+    background-color: $primary;
+    color: #fff;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+      transform: translateY(-1px);
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      box-shadow: 0 0 0 0.2rem rgba($primary, 0.2);
+    }
+
+    &--outline {
+      background-color: transparent;
+      color: $primary;
+      border-color: $primary;
+
+      &:hover {
+        background-color: rgba($primary, 0.05);
+        transform: translateY(-1px);
+      }
+
+      &:focus,
+      &:active {
+        box-shadow: 0 0 0 0.2rem rgba($primary, 0.15);
+      }
+    }
+  }
+}

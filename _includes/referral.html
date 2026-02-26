@@ -1,0 +1,52 @@
+<!-- Refer & Earn | referral.html -->
+<section class="referral-section page-section bg-light" id="referral">
+  <div class="container">
+    <div class="referral-card">
+      <div class="card-header">
+        <h2 class="section-heading">{{ site.data.sitetext.referral.title }}</h2>
+        <hr class="divider" />
+        <p class="lead-text">
+          {{ site.data.sitetext.referral.text }}
+        </p>
+      </div>
+
+      <div class="card-steps-row">
+        <!-- Circular couple image -->
+        <div class="referral-image-wrapper">
+          <img
+            src="{{ site.baseurl }}/{{ site.data.sitetext.referral.image }}"
+            alt="{{ site.data.sitetext.referral.image_alt }}"
+            class="referral-image"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Steps -->
+        <div class="steps">
+          {% for step in site.data.sitetext.referral.steps %}
+          {% if forloop.index > 1 %}
+          <div class="step-arrow">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          {% endif %}
+          <div class="step">
+            <div class="step-circle">
+              <i class="{{ step.icon }}"></i>
+            </div>
+            <p>{{ step.text }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <a href="{{ site.data.sitetext.referral.button.url }}?phone={{ site.data.sitetext.referral.button.phone }}&text={{ site.data.sitetext.referral.button.text }}" 
+          class="btn cta-button" 
+          target="_blank">
+          {{ site.data.sitetext.referral.button.button_text }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Refer & Earn -->

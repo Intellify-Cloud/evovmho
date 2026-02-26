@@ -1,0 +1,19 @@
+<!-- About -->
+<section class="about-section page-section" id="{{ site.data.sitetext.about.section | default: 'about' }}">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading">{{ site.data.sitetext.about.title | default: "About Us" }}</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-9 mx-auto text-center">
+        <div class="about-content">
+          <div class="large text-muted">
+            {{ site.data.sitetext.about.text2 | markdownify }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End About -->

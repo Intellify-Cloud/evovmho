@@ -1,0 +1,157 @@
+// layout/_calculators.scss
+// Fully uses centralized design tokens & mixins
+
+.calculators-section {
+  @include section-padding;
+  background: $bg-color-1;
+
+  &--alt,
+  &--secondary {
+    background: $bg-color-3;
+  }
+}
+
+.section-header {
+  max-width: 800px;
+  margin: 0 auto $gap-xl;
+  text-align: center;
+}
+
+.section-heading {
+  @include heading-2;
+  margin-bottom: $gap-md;
+}
+
+.section-subheading {
+  @include muted-text;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.calculators-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gap-lg;
+  margin-top: $gap-xl;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.calculator-card {
+  @include card-elevated;
+  background: $bg-color-1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-xl;
+
+    .icon-bg {
+      background: rgba($primary, 0.15);
+      transform: scale(1.08);
+    }
+
+    .btn-calculate {
+      background: $color-btn-1-hover;
+      box-shadow: $shadow-lg;
+
+      i {
+        transform: translateX(6px);
+      }
+    }
+  }
+
+  &:focus-within {
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+  }
+}
+
+.card-body {
+  padding: 2.5rem 2rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-wrapper {
+  margin-bottom: $gap-lg;
+}
+
+.icon-bg {
+  width: 100px;
+  height: 100px;
+  background: rgba($primary, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  .card-icon {
+    font-size: 2.8rem;
+    color: $primary;
+  }
+}
+
+.card-title {
+  @include heading-3;
+  margin: 0 0 1rem;
+  min-height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-description {
+  @include body-text;
+  color: $font-color-3;
+  margin: 0 0 $gap-md;
+  flex: 1;
+  text-align: center;
+}
+
+.card-footer {
+  padding: 0 2rem 2rem;
+  background: transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.btn-calculate {
+  @include btn-primary;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.05rem;
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+
+  i {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    background: $color-btn-1-hover;
+  }
+
+  &:focus {
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+  }
+}

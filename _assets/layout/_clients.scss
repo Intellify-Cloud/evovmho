@@ -1,0 +1,99 @@
+// ======================================================
+// layout/_clients.scss – Clients / Partner Logos Section
+// Clean, modern logo grid with subtle interactions
+// ======================================================
+
+#clients,
+.clients-section {
+  @include section-padding;
+  background-color: $bg-color-2; // light neutral to separate from other sections
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .section-heading {
+    @include heading-2;
+    margin-bottom: $gap-md;
+  }
+
+  .section-subheading {
+    @include muted-text;
+    max-width: 720px;
+    margin: 0 auto $gap-xl;
+    font-size: 1.1rem;
+  }
+
+  // Logo grid – single-row, evenly distributed
+  .row.justify-content-center {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: $gap-lg;
+    justify-content: center;
+    margin-top: $gap-md;
+  }
+
+  .client-logo-card {
+    flex: 1 1 0%;
+    min-width: 0;          // allow shrinking below content size
+    max-width: 160px;      // cap so they don't get too wide
+    aspect-ratio: 1 / 1;   // keep square shape
+    background: $bg-color-1;
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    transition: all 0.3s ease;
+    box-shadow: $shadow-sm;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+
+    &:hover {
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: $shadow-md;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      // Removed grayscale and opacity filters - logos now display in full color
+    }
+  }
+}
+
+// ────────────────────────────────────────
+// RESPONSIVE ADJUSTMENTS
+// ────────────────────────────────────────
+@include respond-to(mobile) {
+  #clients,
+  .clients-section {
+    padding-top: $section-padding-y-mobile;
+    padding-bottom: $section-padding-y-mobile;
+  }
+
+  .client-logo-card {
+    max-width: 120px;
+    padding: 0.75rem;
+  }
+
+  .row.justify-content-center {
+    gap: $gap-sm;
+  }
+}
+
+@include respond-to(tablet) {
+  .client-logo-card {
+    max-width: 140px;
+  }
+}

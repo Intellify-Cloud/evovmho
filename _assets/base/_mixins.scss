@@ -1,0 +1,190 @@
+// ======================================================
+// _mixins.scss – Centralized helpers & utilities
+// Material + Golden Ratio + Clean Design
+// ======================================================
+
+// 1. TYPOGRAPHY MIXINS
+// ──────────────────────────────────────────────────────
+@mixin heading-1 {
+  font-family: $font-family-heading;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: $font-color-1;
+  margin: 0 0 $gap-lg 0;
+}
+
+@mixin heading-2 {
+  font-family: $font-family-heading;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: $font-color-1;
+  margin: 0 0 $gap-md 0;
+}
+
+@mixin heading-3 {
+  font-family: $font-family-heading;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 600;
+  color: $font-color-1;
+}
+
+@mixin body-text {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: 1.7;
+  color: $font-color-2;
+}
+
+@mixin muted-text {
+  font-family: $font-family-base;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: $font-color-3;
+}
+
+@mixin accent-text {
+  color: $font-color-4;
+  font-weight: 600;
+}
+
+// 2. BUTTON STYLES (Material-inspired, rounded, elevated)
+@mixin btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-family-base;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+@mixin btn-primary {
+  @include btn-base;
+  background-color: $color-btn-1;
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: $border-radius-pill;
+  box-shadow: $shadow-md;
+
+  &:hover,
+  &:focus {
+    background-color: $color-btn-1-hover;
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+    color: white;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: $shadow-md;
+  }
+}
+
+@mixin btn-secondary {
+  @include btn-base;
+  background-color: $color-btn-3;
+  color: white;
+  padding: 0.85rem 1.9rem;
+  border-radius: $border-radius-pill;
+  box-shadow: $shadow-sm;
+
+  &:hover,
+  &:focus {
+    background-color: $color-btn-3-hover;
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+}
+
+@mixin btn-outline {
+  @include btn-base;
+  background: transparent;
+  border: 2px solid $color-btn-1;
+  color: $color-btn-1;
+  padding: 0.8rem 1.9rem;
+  border-radius: $border-radius-pill;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($color-btn-1, 0.08);
+    color: $color-btn-1-hover;
+    border-color: $color-btn-1-hover;
+  }
+}
+
+@mixin btn-accent {
+  @include btn-base;
+  background: linear-gradient(135deg, $color-btn-2, darken($color-btn-2, 10%));
+  color: white;
+  padding: 1rem 2.2rem;
+  border-radius: $border-radius-pill;
+  box-shadow: $shadow-md;
+
+  &:hover {
+    background: linear-gradient(135deg, darken($color-btn-2, 5%), $color-btn-2-hover);
+    transform: translateY(-3px);
+    box-shadow: $shadow-xl;
+  }
+}
+
+// 3. CARD / ELEVATION MIXINS (Material Design feel)
+@mixin card-base {
+  background: $bg-color-1;
+  border-radius: $border-radius;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-xl;
+  }
+}
+
+@mixin card-elevated {
+  @include card-base;
+  box-shadow: $shadow-lg;
+
+  &:hover {
+    box-shadow: $shadow-xl;
+    transform: translateY(-12px);
+  }
+}
+
+// 4. SPACING / LAYOUT HELPERS (Golden ratio aware)
+@mixin section-padding {
+  padding: $section-padding-y 0;
+
+  @media (max-width: 768px) {
+    padding: $section-padding-y-mobile 0;
+  }
+}
+
+@mixin center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+// 5. RESPONSIVE TYPOGRAPHY & GAP HELPERS
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 767.98px) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (min-width: 768px) and (max-width: 991.98px) { @content; }
+  } @else if $breakpoint == desktop {
+    @media (min-width: 992px) { @content; }
+  }
+}
+
+// Quick spacing utility classes (use in HTML or extend)
+.u-gap-sm { gap: $gap-sm; }
+.u-gap-md { gap: $gap-md; }
+.u-gap-lg { gap: $gap-lg; }
+.u-mb-xl { margin-bottom: $gap-xl; }

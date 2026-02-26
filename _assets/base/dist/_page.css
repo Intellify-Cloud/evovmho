@@ -1,0 +1,69 @@
+iframe[class$=-calc] {
+  display: block;
+  width: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+.bond-calc {
+  height: 1050px;
+}
+
+.afford-calc {
+  height: 1500px;
+}
+
+.transfer-calc {
+  height: 1850px;
+}
+
+.deposit-calc {
+  height: 1500px;
+}
+
+.amortisation-calc {
+  height: 1000px;
+}
+
+.additional-payment-calc {
+  height: 1000px;
+}
+
+@media screen and (max-width: 640px) {
+  .bond-calc {
+    height: 1400px;
+  }
+
+  .afford-calc {
+    height: 1800px;
+  }
+
+  .transfer-calc {
+    height: 2700px;
+  }
+
+  .deposit-calc {
+    height: 1800px;
+  }
+
+  .amortisation-calc {
+    height: 1400px;
+  }
+
+  .additional-payment-calc {
+    height: 1800px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .bond-calc {
+    height: 1200px;
+  }
+
+  .afford-calc {
+    height: 1650px;
+  }
+
+  .transfer-calc {
+    height: 2000px;
+  }
+}

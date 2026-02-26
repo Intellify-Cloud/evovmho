@@ -1,0 +1,117 @@
+<footer id="footer">
+  <div class="container">
+    <div class="footer-content">
+
+      <!-- Brand / About -->
+      <div class="footer-brand">
+        <a href="{{ site.baseurl }}/" class="logo">
+          {% if site.logo %}
+            <img src="{{ site.logo.path }}" alt="{{ site.title }}">
+          {% else %}
+            <span class="site-title">{{ site.title }}</span>
+          {% endif %}
+        </a>
+        <!-- <p class="tagline">{{ site.description | default: "Professional property finance solutions" }}</p> -->
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#calculators">Calculators</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Company Links -->
+      <div class="footer-links">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Use</a></li>
+          <!-- <li><a href="/blog">Blog</a></li> -->
+        </ul>
+      </div>
+
+      <!-- Contact & Social -->
+      <div class="footer-contact">
+        <h5>Get in Touch</h5>
+
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-phone"></i></div>
+          <div class="info">
+            <a href="tel:+27718247820">+27 71 824 7820</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-envelope"></i></div>
+          <div class="info">
+            <a href="mailto:minique@mudaulaw.co.za">minique@mudaulaw.co.za</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="info">
+            <p>Durban, KwaZulu-Natal</p>
+          </div>
+        </div>
+
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/1C9Dt4PnqU/"><i class="fab fa-facebook-f"></i></a>
+          <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
+          <!-- <a href="#"><i class="fab fa-instagram"></i></a> -->
+          <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+        </div>
+      </div>
+
+    </div> <!-- /.footer-content -->
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp">
+      <a href="https://api.whatsapp.com/send?phone=27814063958" target="_blank">
+        <h4><i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i></h4>
+      </a>
+    </div>
+
+    <!-- Floating WhatsApp Chat -->
+    <div class="whatsapp-float">
+      <a 
+        href="https://api.whatsapp.com/send?phone=27814063958&text=Hi%20Sterling%20Crest%2C%20I%20need%20help%20with%20a%20home%20loan" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="Chat with us on WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">Chat with us</span>
+      </a>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.company }} - Expert in Bond Origination & Home Loans | Durban. All rights reserved. Powered by <a href="{{ site.evo_url }}">{{ site.group }}</a>.</p>
+    </div>
+
+  </div> <!-- /.container -->
+
+  <!-- JavaScript -->
+  <script>
+    function fixPageShort() {
+      if (window.innerHeight > document.body.offsetHeight) {
+        const footer = document.getElementById("footer");
+        footer.style.position = "fixed";
+        footer.style.bottom = 0;
+        footer.style.right = 0;
+        footer.style.left = 0;
+        footer.style.width = "100%";
+      }
+    }
+    window.addEventListener('load', fixPageShort);
+    window.addEventListener('resize', fixPageShort);
+  </script>
+
+</footer>

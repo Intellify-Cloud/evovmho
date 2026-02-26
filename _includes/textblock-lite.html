@@ -1,0 +1,30 @@
+<section class="page-section text-block py-5" id="{{ site.data.sitetext.textblock-lite.section | default: 'textblock' }}">
+  <div class="container text-center">
+    <h1 class="section-heading  text-block-heading">
+      {{ site.data.sitetext.textblock-lite.title | default: 'Text Text-Block' }}
+    </h1>
+
+    {% if site.data.sitetext.textblock-lite.text %}
+    <h3 class="text-block-subheading">
+      {{ site.data.sitetext.textblock-lite.text }}
+    </h3>
+    {% endif %}
+
+    <div class="hero-buttons mt-4">
+      <a class="btn btn-textblock-lite btn-xl js-scroll-trigger" 
+         href="contact" target="_blank">
+        Get Pre-Approved
+      </a>
+      <a class="btn btn-textblock-lite--outline btn-xl text-uppercase js-scroll-trigger" 
+         href="/contact">
+        Apply for a Bond
+      </a>
+    </div>
+
+    {% if site.data.sitetext.textblock-lite.footer %}
+    <div class="text-muted mt-4">
+      {{ site.data.sitetext.textblock-lite.footer | markdownify }}
+    </div>
+    {% endif %}
+  </div>
+</section>

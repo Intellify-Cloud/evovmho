@@ -1,0 +1,20 @@
+<!-- Testimonials -->
+<section class="page-section bg-light testimonials-section" id="{{ site.data.sitetext.testimonials.section | default: 'testimonials' }}">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-heading">{{ site.data.sitetext.testimonials.title }}</h2>
+      <h3 class="section-subheading text-primary">{{ site.data.sitetext.testimonials.text }}</h3>
+    </div>
+
+    <div class="row">
+      {% for person in site.data.sitetext.testimonials.people %}
+      <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-4">
+        <div class="testimonial-card p-4 bg-white text-center w-100">
+          <p class="text-muted font-italic mb-3">“{{ person.testimony }}”</p>
+          <h5 class="mb-0">{{ person.name }}</h5>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

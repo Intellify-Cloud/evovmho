@@ -1,0 +1,31 @@
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading">{{ site.data.sitetext.services.title }}</h2>
+      {% if site.data.sitetext.services.text %}
+      <p class="section-subheading">{{ site.data.sitetext.services.text }}</p>
+      {% endif %}
+    </div>
+    
+    <div class="services">
+      {% for service in site.data.sitetext.services.list %}
+      <div class="card">
+        <div class="card-body">
+          <!-- <div class="fa-stack fa-4x"> -->
+            <!-- //<div class="fa-stack-2x"> -->
+              <!-- <i class="{{ service.icon | default: 'fas fa-home' }} fa-stack-1x"></i> -->
+            <!-- //</div> -->
+          <!-- </div> -->
+          <h4 class="service-heading">{{ service.title }}</h4>
+          {% if service.desc %}
+          <p class="service-description">{{ service.desc }}</p>
+          {% endif %}
+          {% if service.link %}
+          <a href="{{ service.link.url | default: '#' }}" class="btn">{{ service.link.text }}</a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

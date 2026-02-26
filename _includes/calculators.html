@@ -1,0 +1,35 @@
+<!-- Calculators Section -->
+<section class="calculators-section page-section" id="{{ site.data.sitetext.calculators.section | default: 'calculators' }}">
+  <div class="container">
+    <div class="row">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext.calculators.title | default: "Home Loan Calculators" }}</h2>
+        <p class="section-subheading text-muted">
+          {{ site.data.sitetext.calculators.text | default: "Use our calculators to work out the size of home loan you are likely to qualify for and what your bond repayments will be." }}
+        </p>
+      </div>
+    </div>
+
+    <div class="calculators-grid">
+      {% for calc in site.data.sitetext.calculators.list %}
+        <article class="calculator-card" role="article">
+          <div class="card-body">
+            <div class="icon-wrapper">
+              <div class="icon-bg">
+                <i class="{{ calc.icon | default: 'fas fa-calculator' }} card-icon" aria-hidden="true"></i>
+              </div>
+            </div>
+            <h4 class="card-title">{{ calc.title }}</h4>
+            <p class="card-description">{{ calc.desc }}</p>
+          </div>
+          <div class="card-footer">
+            <a href="{{ calc.link.url }}" class="btn-calculate" aria-label="...">
+              <span class="btn-text">{{ calc.link.text | default: "Calculate" }}</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>  
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

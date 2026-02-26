@@ -1,0 +1,113 @@
+/* =========================================================
+   Text Block Section
+   ========================================================= */
+.page-section#textblock,
+.page-section[id*=textblock] {
+  background-color: #ffffff;
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  text-align: center;
+}
+.page-section#textblock .section-heading,
+.page-section[id*=textblock] .section-heading {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.75rem;
+}
+.page-section#textblock .textblock-subheading,
+.page-section[id*=textblock] .textblock-subheading {
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #6c757d;
+}
+
+/* =========================================================
+   White Card Container
+   ========================================================= */
+.textblock-heading {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.06);
+  /* Changed / added for centering the content inside the card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+/* =========================================================
+   Checklist Rows
+   ========================================================= */
+.textblock-heading .row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0 0 1.35rem;
+  /* Key changes: constrain and center each row */
+  max-width: 720px;
+  width: 100%;
+}
+
+.textblock-heading .row:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   Icon Column
+   ========================================================= */
+.textblock-image {
+  flex: 0 0 1.75rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.2rem;
+}
+.textblock-image i {
+  font-size: 1.25rem;
+  color: #01acc8;
+}
+
+/* =========================================================
+   Text Content
+   ========================================================= */
+.textblock-title {
+  max-width: 720px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* =========================================================
+   Footer Line
+   ========================================================= */
+.text-muted {
+  margin-top: 2.75rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #6c757d;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+/* =========================================================
+   Responsive Refinements
+   ========================================================= */
+@media (max-width: 768px) {
+  .textblock-heading {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .textblock-title {
+    font-size: 1rem;
+  }
+
+  .textblock-heading .row {
+    gap: 0.75rem;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,36 @@
+<!-- Articles -->
+  <section class="page-section" id="{{ site.data.sitetext.articles.section | default: "services" }}">
+    <div class="container">
+	
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">{{ site.data.sitetext.articles.title | default: "Articles" }}</h2>
+
+          {% if site.data.sitetext.articles.text %}
+          
+		  <h3 class="section-subheading text-muted">{{ site.data.sitetext.articles.text }}</h3>
+		  {% endif %}
+        </div>
+      </div>
+	  
+      <div class="card-deck articles">
+	  {% for post in site.posts limit:3 %}
+
+        <div class="card">
+          <div class="card-body text-center">
+            <img class="card-img-top" src="{{ post.image }}" alt="Card image cap">
+            <h4 class="card-title service-heading">{{ post.title | markdownify }}</h4>
+            <div class="text-muted">{{ post.excerpt | markdownify }}</div>
+            {{ post.category}}
+          </div>
+          <div class="card-footer text-center">
+            <a href="{{ post.url }}" class="btn btn-primary" role="button">Read more</a>
+          </div>
+   
+        </div>
+	  {% endfor %}
+      </div>
+	  
+    </div>
+  </section>
+<!-- End Articles -->

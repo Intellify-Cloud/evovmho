@@ -1,0 +1,40 @@
+<!-- More Calculators Section -->
+<section class="calculators-section calculators-section--secondary page-section bg-light" id="{{ site.data.sitetext.more-calculators.section | default: 'more-calculators' }}">
+  <div class="container">
+    <div class="row">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext.more-calculators.title | default: "More Calculators" }}</h2>
+        {% if site.data.sitetext.more-calculators.text %}
+          <p class="section-subheading text-muted">{{ site.data.sitetext.more-calculators.text }}</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="calculators-grid">
+      {% for calc in site.data.sitetext.more-calculators.list %}
+        <article class="calculator-card" role="article">
+          <div class="card-body">
+            <div class="icon-wrapper">
+              <div class="icon-bg">
+                <i class="{{ calc.icon | default: 'fas fa-calculator' }} card-icon" aria-hidden="true"></i>
+              </div>
+            </div>
+            <h4 class="card-title">{{ calc.title }}</h4>
+            {% if calc.desc %}
+              <p class="card-description">{{ calc.desc | markdownify }}</p>
+            {% endif %}
+          </div>
+          {% if calc.link %}
+            <div class="card-footer">
+              <a href="{{ calc.link.url }}" class="btn-calculate" aria-label="...">
+                <span class="btn-text">{{ calc.link.text | default: "Calculate" }}</span>
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- End More Calculators -->

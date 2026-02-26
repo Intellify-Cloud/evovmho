@@ -1,0 +1,185 @@
+// ======================================================
+// layout/_document-download.scss
+// Document Download Section – Flex Grid Layout (1:4 left:right)
+// Wider card ~930px, lifted icon, Bootstrap-compatible
+// ======================================================
+
+.document-download-section {
+  padding: 6rem 0;                      // your @include section-padding equivalent – adjust as needed
+  background-color: $bg-color-2;        // neutral background
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .document-card {
+    background: $bg-color-1;
+    border-radius: 24px;
+    padding: 4.5rem 4rem 4rem;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 3.5rem;
+    align-items: flex-start;
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    @media (max-width: 576px) {
+      gap: 2.5rem;
+    }
+  }
+
+  // ─── LEFT COLUMN (icon + button + meta) ───
+  .left-column {
+    flex: 1;                        // 1 part
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 200px;
+    max-width: 240px;               // prevents over-expansion on ultra-wide screens
+
+    .document-icon {
+      width: 160px;
+      height: 160px;
+      background: #001f3f;          // dark navy – replace with $color-navy-dark if defined
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-8px);
+      }
+
+      svg {
+        width: 80px;
+        height: 80px;
+        color: white;
+        fill: white;
+      }
+
+      @media (max-width: 991px) {
+        width: 140px;
+        height: 140px;
+        svg { width: 70px; height: 70px; }
+      }
+
+      @media (max-width: 576px) {
+        width: 120px;
+        height: 120px;
+        svg { width: 60px; height: 60px; }
+      }
+    }
+
+    .btn-download {
+      padding: 1rem 2.5rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+      border-radius: 12px;
+      min-width: 220px;
+      margin-bottom: 1.75rem;
+      background: $color-btn-1;     // your primary button color
+      color: white;
+      border: none;
+      transition: all 0.25s ease;
+
+      &:hover,
+      &:focus {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 28px rgba($color-btn-1, 0.28);
+        background: darken($color-btn-1, 8%);
+      }
+
+      @media (max-width: 576px) {
+        width: 100%;
+        min-width: unset;
+      }
+    }
+
+    .document-meta {
+      font-size: 0.925rem;
+      color: $font-color-3;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      line-height: 1.4;
+
+      .meta-divider {
+        color: $font-color-4;
+        font-weight: 300;
+      }
+
+      @media (max-width: 576px) {
+        flex-direction: column;
+        gap: 0.4rem;
+
+        .meta-divider {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // ─── RIGHT COLUMN (title + subheading + description) ───
+  .right-column {
+    flex: 4;                        // 4 parts → 1:4 ratio
+    display: flex;
+    flex-direction: column;
+
+    .document-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      color: $font-color-1;
+
+      @media (max-width: 991px) {
+        font-size: 2.25rem;
+      }
+
+      @media (max-width: 576px) {
+        font-size: 1.875rem;
+        text-align: center;
+      }
+    }
+
+    .document-subheading {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      color: $font-color-1;
+
+      @media (max-width: 576px) {
+        font-size: 1.375rem;
+        text-align: center;
+      }
+    }
+
+    .document-description {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: $font-color-2;
+      max-width: 720px;
+
+      @media (max-width: 576px) {
+        font-size: 1.05rem;
+        text-align: center;
+      }
+    }
+  }
+}

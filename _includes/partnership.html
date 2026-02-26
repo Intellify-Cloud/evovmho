@@ -1,0 +1,255 @@
+<!-- Estate Agent Partnership Programme Section -->
+<section class="partnership-section page-section bg-light" id="{{ site.data.sitetext.partnership.section | default: 'partnership' }}">
+  <div class="container">
+    
+    <!-- Hero / Header -->
+    <div class="partnership-hero">
+      <h2 class="section-heading">
+        {{ site.data.sitetext.partnership.title | default: "Estate Agent Partnership Programme" }}
+      </h2>
+      <p class="section-subheading text-muted">
+        {{ site.data.sitetext.partnership.tagline | default: "More Exposure. More Buyers. More Approved Deals." }}
+      </p>
+      <p class="partnership-intro">
+        {{ site.data.sitetext.partnership.intro | default: "At Sterling Crest, we believe strong partnerships create stronger results. Our Estate Agent Partnership Programme is designed to help you market your listings more effectively, reach pre-qualified buyers, and close deals faster." }}
+      </p>
+      <p class="partnership-mission">
+        {{ site.data.sitetext.partnership.mission | default: "We don't just originate bonds — we help you sell property." }}
+      </p>
+    </div>
+
+    <!-- How It Works
+    <div class="partnership-how">
+      <h3 class="section-heading">
+        <i class="fas fa-handshake" aria-hidden="true"></i>
+        {{ site.data.sitetext.partnership.how_title | default: "How Our Estate Agent Partnership Works" }}
+      </h3>
+      <p class="partnership-intro">
+        {{ site.data.sitetext.partnership.how_intro | default: "When you partner with Sterling Crest, we help you:" }}
+      </p>
+      <ul class="partnership-benefits-list">
+        {% for benefit in site.data.sitetext.partnership.benefits %}
+          <li>{{ benefit }}</li>
+        {% else %}
+          <li>Market your listings to active buyers</li>
+          <li>Promote your brand alongside ours</li>
+          <li>Support your buyers with fast, professional bond pre-approvals</li>
+          <li>Help improve deal success rates</li>
+          <li>Keep you informed throughout the bond process</li>
+        {% endfor %}
+      </ul>
+    </div> -->
+
+    <!-- Marketing Support
+    <div class="marketing-section">
+      <h3 class="section-heading">
+        <i class="fas fa-bullhorn" aria-hidden="true"></i>
+        {{ site.data.sitetext.partnership.marketing_title | default: "Marketing Support for Your Listings" }}
+      </h3>
+      <p class="partnership-intro" style="text-align: center; margin-bottom: 3rem;">
+        {{ site.data.sitetext.partnership.marketing_intro | default: "As a Sterling Crest Partner Agent, we help promote your listings through:" }}
+      </p>
+
+      <div class="marketing-grid"> -->
+
+        <!-- Website Exposure Card
+        <article class="marketing-card">
+          <div class="marketing-card__header">
+            <div class="marketing-card__icon">
+              <i class="fas fa-globe" aria-hidden="true"></i>
+            </div>
+            <h4 class="section-heading">
+              {{ site.data.sitetext.partnership.website_card.title | default: "Website Exposure" }}
+            </h4>
+          </div>
+          <div class="marketing-card__body">
+            <p>{{ site.data.sitetext.partnership.website_card.description | default: "Your listings can be promoted on our website with your branding." }}</p>
+          </div>
+          
+          <div class="marketing-card__features">
+            <p class="section-heading">
+              {{ site.data.sitetext.partnership.website_card.features_title | default: "Your Agency Logo Appears:" }}
+            </p>
+            <ul class="marketing-card__features-list">
+              {% for feature in site.data.sitetext.partnership.website_card.features %}
+                <li>{{ feature }}</li>
+              {% else %}
+                <li>"Listing Supported By Sterling Crest"</li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <p style="margin-top: 1rem; font-weight: 600; color: var(--font-color-1);">
+            {{ site.data.sitetext.partnership.website_card.benefit | default: "This builds credibility and buyer confidence." }}
+          </p>
+        </article> -->
+
+        <!-- Social Media Card
+        <article class="marketing-card">
+          <div class="marketing-card__header">
+            <div class="marketing-card__icon">
+              <i class="fab fa-facebook-square" aria-hidden="true"></i>
+            </div>
+            <h4 class="section-heading">
+              {{ site.data.sitetext.partnership.social_card.title | default: "Social Media Marketing Support" }}
+            </h4>
+          </div>
+          <div class="marketing-card__body">
+            <p>{{ site.data.sitetext.partnership.social_card.description | default: "We help market selected listings on our Facebook platform." }}</p>
+          </div>
+          
+          <div class="marketing-card__features">
+            <p class="section-heading">
+              {{ site.data.sitetext.partnership.social_card.posts_title | default: "Posts May Include:" }}
+            </p>
+            <ul class="marketing-card__features-list">
+              {% for item in site.data.sitetext.partnership.social_card.post_items %}
+                <li>{{ item }}</li>
+              {% else %}
+                <li>Your listing details</li>
+                <li>Your agency branding</li>
+                <li>Your contact details</li>
+                <li>"Supported by Sterling Crest" branding</li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <p class="section-heading">
+              {{ site.data.sitetext.partnership.social_card.helps_title | default: "This helps:" }}
+            </p>
+            <ul class="partnership-benefits-list" style="margin-top: 0.5rem;">
+              {% for help in site.data.sitetext.partnership.social_card.helps %}
+                <li>{{ help }}</li>
+              {% else %}
+                <li>Increase listing exposure</li>
+                <li>Drive qualified buyer enquiries</li>
+                <li>Strengthen your brand presence</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </article> -->
+      </div>
+    </div>
+
+    <!-- Referral Reward
+    <div class="referral-highlight">
+      <div class="referral-highlight__icon">
+        <i class="fas fa-gift" aria-hidden="true"></i>
+      </div>
+      <h3 class="section-heading">
+            {{ site.data.sitetext.partnership.referral.title | default: "Referral Reward" }}
+      </h3>
+      <p class="referral-highlight__text">
+        {{ site.data.sitetext.partnership.referral.text | default: "When you refer buyers to Sterling Crest and the bond is successfully approved and registered:" }}
+      </p>
+      <p class="referral-highlight__text">
+        <strong>{{ site.data.sitetext.partnership.referral.reward | default: "👉 You may qualify for referral rewards (where applicable and compliant)." }}</strong>
+      </p>
+      <p class="referral-highlight__note">
+        {{ site.data.sitetext.partnership.referral.note | default: "(Structured within industry and regulatory guidelines.)" }}
+      </p>
+    </div> -->
+
+    <!-- Why Partner With Us
+    <div class="why-partner">
+      <h3 class="section-heading">
+        <i class="fas fa-star" aria-hidden="true"></i>
+        {{ site.data.sitetext.partnership.why_partner.title | default: "Why Estate Agents Partner With Sterling Crest" }}
+      </h3>
+      
+      <div class="benefits-grid">
+        {% for reason in site.data.sitetext.partnership.why_partner.reasons %}
+          <div class="benefit-item">
+            <span>{{ reason }}</span>
+          </div>
+        {% else %}
+          <div class="benefit-item">
+            <span>Faster buyer pre-approvals</span>
+          </div>
+          <div class="benefit-item">
+            <span>Better-qualified buyers viewing your listings</span>
+          </div>
+          <div class="benefit-item">
+            <span>Increased marketing exposure</span>
+          </div>
+          <div class="benefit-item">
+            <span>Professional, reliable communication</span>
+          </div>
+          <div class="benefit-item">
+            <span>Higher deal success rates</span>
+          </div>
+          <div class="benefit-item">
+            <span>Strong client service (which reflects on you)</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div> -->
+
+    <!-- Professional & Ethical Approach
+    <div class="ethics-section">
+      <h3 class="ethics-section__title">
+         {{ site.data.sitetext.partnership.ethics.title | default: "Professional & Ethical Approach" }}
+      </h3>
+      
+      <p class="ethics-section__text">
+        {{ site.data.sitetext.partnership.ethics.respect | default: "We respect your client relationships." }}
+      </p>
+      <p class="ethics-section__text">
+        {{ site.data.sitetext.partnership.ethics.support | default: "We support your sale — we never compete for your client." }}
+      </p>
+      
+      <div class="ethics-goals">
+        <p class="ethics-goals__title">
+          {{ site.data.sitetext.partnership.ethics.goal_title | default: "Our goal is simple:" }}
+        </p>
+        <ul class="ethics-goals-list">
+          {% for goal in site.data.sitetext.partnership.ethics.goals %}
+            <li>{{ goal }}</li>
+          {% else %}
+            <li>Help you close more deals</li>
+            <li>Help your buyers secure finance smoothly</li>
+            <li>Help you grow your brand presence</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div> -->
+
+    <!-- Call to Action -->
+    <div class="partnership-cta">
+      <h3 class="section-heading">
+           {{ site.data.sitetext.partnership.cta.title | default: "Become a Sterling Crest Partner Agent" }}
+      </h3>
+      
+      <p class="partnership-cta__list">
+        {{ site.data.sitetext.partnership.cta.intro | default: "If you want to:" }}
+      </p>
+      
+      <ul class="partnership-cta__list">
+        {% for item in site.data.sitetext.partnership.cta.wants %}
+          <li>{{ item }}</li>
+        {% else %}
+          <li>Get more exposure for your listings</li>
+          <li>Work with pre-qualified buyers</li>
+          <li>Partner with a professional bond origination team</li>
+        {% endfor %}
+      </ul>
+      
+      <p class="partnership-cta__text">
+        {{ site.data.sitetext.partnership.cta.action | default: "Let's work together." }}
+      </p>
+      
+      <a href="{{ site.data.sitetext.partnership.cta.button_link | default: '/parnership' }}" class="btn-secondary">
+        <span>{{ site.data.sitetext.partnership.cta.button_text | default: "Find Out More" }}</span>
+        <br>
+        <!-- <i class="fas fa-arrow-right" aria-hidden="true"></i> -->
+      </a>
+      <br>
+      <p class="partnership-cta__tagline">
+        {{ site.data.sitetext.partnership.cta.tagline | default: "Sterling Crest — Supporting Agents. Supporting Buyers. Supporting Successful Property Deals." }}
+      </p>
+    </div>
+
+  </div>
+</section>
+<!-- End Partnership Section -->
