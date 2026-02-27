@@ -10,7 +10,10 @@ background: gray
     <h3>Minique Vermaak</h3>
     <p>Call: <a href="tel:+27718247820">071 824 7820</a></p>
     <p>WhatsApp: <a href="https://wa.me/27718247820" target="_blank" rel="noopener">Message me</a></p>
-    <p>Email: <a href="mailto:minique@mudaulaw.co.za?subject=Mail from Sterling Crest Website">minique@mudaulaw.co.za</a></p>
+    <p>Email: <a href="mailto:minique@mudaulaw.co.za?subject=Mail from 
+    
+    
+    VM Homeloans Website">minique@mudaulaw.co.za</a></p>
     <br>
   </div>
 </div>

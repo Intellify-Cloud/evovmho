@@ -54,7 +54,7 @@ background: gray
       Referral Reward
     </h3>
     <p>
-      When you refer buyers to Sterling Crest and the bond is successfully approved and registered:
+      When you refer buyers to VM Homeloans and the bond is successfully approved and registered:
     </p>
     <p>
       <strong>👉 You may qualify for referral rewards (where applicable and compliant).</strong>
@@ -68,7 +68,7 @@ background: gray
   <div class="why-partner text-center" style="max-width: 800px; margin: 2rem auto;">
     <h3 class="service-heading" style="justify-content: center;">
       <i class="fas fa-star" aria-hidden="true"></i>
-      Why Estate Agents Partner With Sterling Crest
+      Why Estate Agents Partner With VM Homeloans
     </h3>
     
     <div class="benefits-grid">

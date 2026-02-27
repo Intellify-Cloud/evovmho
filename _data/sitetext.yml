@@ -83,9 +83,9 @@ more-calculators:
         text: "Calculate"
 
 textblock:
-  title: "Why Sterling Crest"
+  title: "Why VM Homeloans"
   text: "Most people don’t get rejected by banks…<br>They get rejected because their application is wrong."
-  footer: "At Sterling Crest KZN, we ENGINEER your bond application so it gets approved."
+  footer: "At VM Homeloans KZN, we ENGINEER your bond application so it gets approved."
   section: textblock
   list:
     - title: "We know exactly which banks fit your profile"
@@ -191,12 +191,12 @@ partnership:
   section: "partnership"
   title: "Estate Agent Partnership Programme"
   tagline: "More Exposure. More Buyers. More Approved Deals."
-  intro: "At Sterling Crest, we believe strong partnerships create stronger results. Our Estate Agent Partnership Programme is designed to help you market your listings more effectively, reach pre-qualified buyers, and close deals faster."
+  intro: "At VM Homeloans, we believe strong partnerships create stronger results. Our Estate Agent Partnership Programme is designed to help you market your listings more effectively, reach pre-qualified buyers, and close deals faster."
   mission: "We don't just originate bonds — we help you sell property."
 
   # How It Works Section
   how_title: "How Our Estate Agent Partnership Works"
-  how_intro: "When you partner with Sterling Crest, we help you:"
+  how_intro: "When you partner with VM Homeloans, we help you:"
   benefits:
     - "Market your listings to active buyers"
     - "Promote your brand alongside ours"
@@ -206,7 +206,7 @@ partnership:
 
   # Marketing Support Section
   marketing_title: "Marketing Support for Your Listings"
-  marketing_intro: "As a Sterling Crest Partner Agent, we help promote your listings through:"
+  marketing_intro: "As a VM Homeloans Partner Agent, we help promote your listings through:"
 
   # Website Card
   website_card:
@@ -214,7 +214,7 @@ partnership:
     description: "Your listings can be promoted on our website with your branding."
     features_title: "Your Agency Logo Appears:"
     features:
-      - '"Listing Supported By Sterling Crest"'
+      - '"Listing Supported By VM Homeloans"'
     benefit: "This builds credibility and buyer confidence."
 
   # Social Media Card
@@ -226,7 +226,7 @@ partnership:
       - "Your listing details"
       - "Your agency branding"
       - "Your contact details"
-      - '"Supported by Sterling Crest" branding'
+      - '"Supported by VM Homeloans" branding'
     helps_title: "This helps:"
     helps:
       - "Increase listing exposure"
@@ -236,13 +236,13 @@ partnership:
   # Referral Reward Section
   referral:
     title: "Referral Reward"
-    text: "When you refer buyers to Sterling Crest and the bond is successfully approved and registered:"
+    text: "When you refer buyers to VM Homeloans and the bond is successfully approved and registered:"
     reward: "👉 You may qualify for referral rewards (where applicable and compliant)."
     note: "(Structured within industry and regulatory guidelines.)"
 
   # Why Partner Section
   why_partner:
-    title: "Why Estate Agents Partner With Sterling Crest"
+    title: "Why Estate Agents Partner With VM Homeloans"
     reasons:
       - "Faster buyer pre-approvals"
       - "Better-qualified buyers viewing your listings"
@@ -264,7 +264,7 @@ partnership:
 
   # Call to Action
   cta:
-    title: "Become a Sterling Crest Partner Agent"
+    title: "Become a VM Homeloans Partner Agent"
     intro: "If you want to:"
     wants:
       - "Get more exposure for your listings"
@@ -273,7 +273,7 @@ partnership:
     action: "Let's work together."
     button_text: "Find Out More"
     button_link: "/partnership"
-    tagline: "Sterling Crest — Supporting Agents. Supporting Buyers. Supporting Successful Property Deals."
+    tagline: "VM Homeloans — Supporting Agents. Supporting Buyers. Supporting Successful Property Deals."
 
 referral:
   title: "Refer & Earn"

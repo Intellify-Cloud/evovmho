@@ -26,8 +26,6 @@ exclude: [node_modules, webpack-config.js, package.json, package-lock.json]
 
 group: evo Homeloans
 
-address: Durban, KZN
-
 broadsheetApiUrl: https://ca-broadsheet-webapi.mangodesert-1e0c2940.westeurope.azurecontainerapps.io/
 
 evo_url: https://www.evohomeloans.co.za
