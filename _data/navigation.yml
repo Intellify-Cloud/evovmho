@@ -2,20 +2,15 @@ nav:
   - title: "Services"
     section: services
 
+  - title: "Calculators"
+    section: calculators
+
+  - title: "Bank Partners"
+    section: clients
+  
   - title: "Team"
     section: team
-
-  - title: "About"
-    section: about
-
-  - title: "Partner"
-    section: partnership
-
-  - title: "Calculator"
-    section: calculator
 
   - title: "Contact"
     url: /contact
 
-  # - title: "Blog"
-  #   section: articles

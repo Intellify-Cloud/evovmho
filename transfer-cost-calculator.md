@@ -2,10 +2,9 @@
 layout: page
 title: Transfer Cost Calculator
 background: white
+calculator_class: transfer-calc
+calculator_src: https://www.ooba.co.za/calculators/bond-and-transfer-costs-calculator?iframe=true&iftype=evogroup
+calculator_title: Transfer Cost Calculator
 ---
 
-<div>
-    <iframe class="transfer-calc" frameborder="0"
-        src="https://www.ooba.co.za/calculators/bond-and-transfer-costs-calculator?iframe=true&iftype=evogroup"
-        title="Transfer Cost Calculator"></iframe>
-</div>
+{% include calculator-iframe.html %}

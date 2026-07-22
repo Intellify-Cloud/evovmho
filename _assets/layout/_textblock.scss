@@ -1,130 +1,6 @@
-/* =========================================================
-   Text Block Section
-*/
-
-.page-section#textblock,
-.page-section[id*="textblock"] {
-  background-color: #ffffff;
-  padding: clamp(4rem, 8vw, 7rem) 0;
-  text-align: center;
-
-  .section-heading {
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    margin-bottom: 0.75rem;
-    // text-transform: uppercase;
-  }
-
-  .textblock-subheading {
-    max-width: 720px;
-    margin: 0 auto 4rem;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #6c757d;
-  }
-}
-
-/*  White Card Container */
-
-.textblock-heading {
-  max-width: 900px;
-  margin: 0 auto;
-
-  background: #ffffff;
-  border-radius: 1.25rem;
-
-  padding: clamp(1.75rem, 4vw, 3rem);
-
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.06);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: left;
-}
-
-/* =========================================================
-   Checklist Rows
-========================================================= */
-
-.textblock-heading .row {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin: 0 0 1.35rem;
-  max-width: 720px;
-  width: 100%;
-}
-
-.textblock-heading .row:last-child {
-  margin-bottom: 0;
-}
-
-/* =========================================================
-   Icon Column
-========================================================= */
-
-.textblock-image {
-  flex: 0 0 1.75rem;
-  display: flex;
-  justify-content: center;
-  margin-top: 0.2rem;
-
-  i {
-    font-size: 1.25rem;
-    color: #01acc8;
-  }
-}
-
-/* =========================================================
-   Text Content
-========================================================= */
-
-.textblock-title {
-  max-width: 720px;
-  font-size: 1.05rem;
-  line-height: 1.65;
-  font-weight: 500;
-  color: #2c3e50;
-}
-
-/* =========================================================
-   Footer Line
-========================================================= */
-
-.text-muted {
-  margin-top: 2.75rem;
-  text-align: center;
-  font-size: 1rem;
-  color: #6c757d;
-  max-width: 720px;
-  margin-inline: auto;
-}
-
-/* =========================================================
-   Responsive Refinements
-========================================================= */
-
-@media (max-width: 768px) {
-  .textblock-heading {
-    padding: 1.75rem 1.5rem;
-  }
-
-  .textblock-title {
-    font-size: 1rem;
-  }
-
-  .textblock-heading .row {
-    gap: 0.75rem;
-    max-width: 100%;
-  }
-}
-
-
 /* ======================================================
    layout/_textblock.scss – Text Block / Features List
-====================================================== */
+===================================================== */
 
 .textblock-section {
   @include section-padding;
@@ -147,20 +23,29 @@
   }
 
   .textblock-content {
-    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: $gap-lg;
+    max-width: 1040px;
     margin: 0 auto;
   }
 
   .textblock-item {
     display: flex;
     align-items: flex-start;
-    gap: $gap-lg;
-    margin-bottom: $gap-xl;
-    padding: $gap-md;
+    gap: $gap-md;
+    min-height: 100%;
+    padding: $gap-lg;
     border-radius: $border-radius;
     background: $bg-color-1;
     box-shadow: $shadow-sm;
     transition: all 0.3s ease;
+
+    &:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      max-width: calc(50% - (#{$gap-lg} / 2));
+      justify-self: center;
+    }
 
     &:hover {
       transform: translateY(-4px);
@@ -186,6 +71,7 @@
 
       .textblock-title {
         @include heading-3;
+        font-size: 1.25rem;
         margin: 0 0 0.5rem;
         color: $font-color-1;
         line-height: 1.4;
@@ -221,6 +107,11 @@
     padding-bottom: $section-padding-y-mobile;
   }
 
+  .textblock-content {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+  }
+
   .textblock-item {
     flex-direction: column;
     align-items: center;
@@ -230,6 +121,12 @@
 
     .textblock-icon {
       margin-bottom: 0.75rem;
+    }
+
+    &:last-child:nth-child(odd) {
+      grid-column: auto;
+      max-width: none;
+      justify-self: stretch;
     }
   }
 }

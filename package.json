@@ -4,6 +4,9 @@
   "description": "Get online. Grow online. Intellify your business to reach new heights.",
   "scripts": {
     "bundle": "webpack",
+    "build:css": "webpack",
+    "build:jekyll": "bundle exec jekyll build --trace --baseurl ''",
+    "build": "npm run build:css && npm run build:jekyll",
     "serve": "jekyll serve --baseurl ''",
     "trace": "jekyll serve --trace --baseurl ''"
   },
@@ -19,12 +22,11 @@
     "mini-css-extract-plugin": "^0.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "popper.js": "^1.15.0",
-    "style-loader": "^1.0.0",
     "terser-webpack-plugin": "^4.1.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.9",
-    "node-sass": "^4.12.0",
+    "sass": "^1.69.0",
     "sass-loader": "^9.0.3",
     "jquery.easing": "^1.4.1"
   },

@@ -1,0 +1,28 @@
+iframe[class$="-calc"] {
+  display: block;
+  width: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+@each $name, $height in $calculator-heights {
+  .#{$name}-calc {
+    height: $height;
+  }
+}
+
+@media (max-width: 640px) {
+  @each $name, $height in $calculator-heights-mobile {
+    .#{$name}-calc {
+      height: $height;
+    }
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  @each $name, $height in $calculator-heights-tablet {
+    .#{$name}-calc {
+      height: $height;
+    }
+  }
+}

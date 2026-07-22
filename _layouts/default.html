@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   {% include head.html %}
 
-  <body id="page-top">
+  <body id="page-top" class="{% if page.layout == 'page' %}page-body{% endif %}{% if page.background == 'grey' or page.background == 'gray' %} bg-light{% endif %}">
 
       {{ content }}
 

@@ -2,10 +2,9 @@
 layout: page
 title: Bond Affordability Calculator
 background: white
+calculator_class: bond-calc
+calculator_src: https://www.ooba.co.za/calculators/affordability-calculator?iframe=true&iftype=evogroup
+calculator_title: Affordability Calculator
 ---
 
-<div>
-    <iframe class="bond-calc" frameborder="0"
-        src="https://www.ooba.co.za/calculators/affordability-calculator?iframe=true&iftype=evogroup"
-        title="Affordability Calculator"></iframe>
-</div>
+{% include calculator-iframe.html %}

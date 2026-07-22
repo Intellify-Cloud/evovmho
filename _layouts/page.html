@@ -1,14 +1,11 @@
 ---
 layout: default
 ---
-{% include nav.html %}
+{% include nav.html variant="page" %}
 
-{% if page.background == "grey" or page.background == "gray" %}
-<script>
-document.getElementById("page-top").className="bg-light";
-</script>
-{% endif %}
-
+<main id="main-content">
 <div class="container" id="pagecontainer">
+{% if page.title %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
 {{ content }}
 </div>
+</main>

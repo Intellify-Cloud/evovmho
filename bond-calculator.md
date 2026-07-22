@@ -2,14 +2,10 @@
 layout: page
 title: Bond Calculator
 background: white
+calculator_class: bond-calc
+calculator_src: https://www.ooba.co.za/calculators/bond-repayment-calculator?iframe=true&iftype=evogroup
+calculator_title: Bond Calculator
 ---
 
-<br>
-
-<div>
-    <iframe class="bond-calc" frameborder="0"
-        src="https://www.ooba.co.za/calculators/bond-repayment-calculator?iframe=true&iftype=evogroup"
-        title="Bond Calculator"></iframe>
-</div>
-
+{% include calculator-iframe.html %}
 

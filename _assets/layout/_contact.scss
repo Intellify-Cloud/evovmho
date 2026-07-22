@@ -214,7 +214,7 @@
 // ────────────────────────────────────────
 // MOBILE TWEAKS
 // ────────────────────────────────────────
-@include respond-to(mobile-only) {
+@include respond-to(mobile) {
   .contact-section {
     .contact-form-card,
     .contact-info-card {
@@ -227,6 +227,110 @@
 
     .contact-person {
       margin-top: $gap-lg;
+    }
+  }
+}
+
+.contact-page-cards {
+  padding-bottom: $gap-xl;
+
+  .contact-page-heading {
+    margin-bottom: $gap-lg;
+
+    h1 {
+      @include heading-2;
+    }
+  }
+
+  .contact-card-grid {
+    display: grid;
+    gap: $gap-lg;
+
+    @include respond-to(desktop) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+    }
+  }
+
+  .contact-info-card {
+    @include card-elevated;
+    padding: $gap-lg;
+    text-align: center;
+
+    h2 {
+      @include heading-3;
+      font-size: 1.35rem;
+      margin-bottom: $gap-md;
+    }
+
+    p {
+      @include muted-text;
+      margin-bottom: $gap-md;
+    }
+
+    dl,
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    dl div,
+    .contact-link-list li {
+      display: grid;
+      gap: 0.25rem;
+      padding: 0.85rem 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.07);
+    }
+
+    dl div:first-child,
+    .contact-link-list li:first-child {
+      border-top: 0;
+    }
+
+    dt,
+    .contact-link-list span {
+      color: $font-color-1;
+      font-weight: 700;
+    }
+
+    dd {
+      margin: 0;
+      color: $font-color-2;
+    }
+  }
+
+  .contact-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: $gap-md;
+    color: $primary;
+    background: rgba($primary, 0.1);
+    border-radius: 50%;
+    font-size: 1.45rem;
+  }
+
+  .contact-link-list {
+    list-style: none;
+
+    a {
+      overflow-wrap: anywhere;
+    }
+  }
+
+  .contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+
+    a {
+      @include btn-primary;
+      gap: 0.45rem;
+      padding: 0.75rem 1.15rem;
+      font-size: 0.95rem;
     }
   }
 }

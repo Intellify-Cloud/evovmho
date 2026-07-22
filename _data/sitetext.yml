@@ -161,8 +161,8 @@ team:
           icon: fab fa-whatsapp
         - url: mailto:minique@mudaulaw.co.za?subject=VM Homeloans Website Enquiry
           icon: fas fa-envelope
-        - url: https://www.mudaulaw.co.za
-          icon: fas fa-globe
+        # - url: https://www.mudaulaw.co.za
+        #   icon: fas fa-globe
 
 testimonials:
   title: "Testimonials"
@@ -300,15 +300,28 @@ contact:
   section: team
 
 footer:
-  legal: "Powered by evo Homeloans"
+  description: "Expert bond origination and home loan solutions in Gauteng, South Africa."
+  sections:
+    - title: "Quick Links"
+      links:
+        - text: "Services"
+          url: "#services"
+        - text: "Calculators"
+          url: "#calculators"
+        - text: "Team"
+          url: "#team"
+        - text: "Contact"
+          url: "/contact"
+    - title: "Company"
+      links:
+        - text: "Privacy Policy"
+          url: "/privacy"
+        - text: "Terms of Use"
+          url: "/terms"
   social:
-    #- url: https://twitter.com/Angela_macey
-    #  icon: "fab fa-twitter"
-    #- url: https://www.facebook.com/share/1C9Dt4PnqU/
-    #  icon: "fab fa-facebook-f"
-    #- url: https://za.linkedin.com/in/Angela-macey-homeloans
-    #  icon: "fab fa-linkedin-in"
-    - url: https://api.whatsapp.com/send?phone=27814063958
+    - title: "WhatsApp"
+      url: "https://api.whatsapp.com/send?phone=27718247820"
       icon: "fab fa-whatsapp"
-    # - url: https://instagram.com
-    #   icon: "fab fa-instagram"
+  credits:
+    - text: "Powered by evo Homeloans"
+      url: "https://www.evohomeloans.co.za"

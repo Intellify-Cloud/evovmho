@@ -378,7 +378,7 @@
 // ────────────────────────────────────────
 // Responsive Adjustments
 // ────────────────────────────────────────
-@include respond-to(mobile-only) {
+@include respond-to(mobile) {
   .partnership-how,
   .referral-highlight,
   .ethics-section,

@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.2.8"
+ruby "3.2.11"
 
 gem "jekyll", "~> 4.0"
 gem "wdm", ">= 0.1.0"

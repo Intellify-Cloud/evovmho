@@ -1,12 +1,10 @@
 ---
 layout: page
-title: Extra Repayment Calculator
+title: Additional Payment Calculator
 background: white
+calculator_class: additional-payment-calc
+calculator_src: https://www.ooba.co.za/calculators/additional-home-loan-repayment-calculator?iframe=true&iftype=evogroup
+calculator_title: Additional Payment Calculator
 ---
 
-<div>
-    <iframe class="additional-payment-calc" frameborder="0"
-        src="https://www.ooba.co.za/calculators/additional-home-loan-repayment-calculator?iframe=true&iftype=evogroup"
-        title="Extra Repayment Calculator"></iframe>
-</div>
-
+{% include calculator-iframe.html %}

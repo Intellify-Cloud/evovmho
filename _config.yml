@@ -1,4 +1,5 @@
 baseurl: ""
+url: "https://vmhomeloans.co.za"
 
 title: VM Homeloans - Experts in Bond Origination & Home Loans | Centurion, Pretoria | Gauteng
 email: minique@mudaulaw.co.za
@@ -22,7 +23,7 @@ webserver_headers:
 logo:
   path: /assets/img/logo/logo.png
 
-exclude: [node_modules, webpack-config.js, package.json, package-lock.json]
+exclude: [node_modules, webpack-config.js, package.json, package-lock.json, jeyll-buid.md]
 
 group: evo Homeloans
 

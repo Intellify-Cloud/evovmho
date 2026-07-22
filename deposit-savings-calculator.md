@@ -2,10 +2,9 @@
 layout: page
 title: Deposit Savings Calculator
 background: white
+calculator_class: deposit-calc
+calculator_src: https://www.ooba.co.za/calculators/home-loan-deposit-saving-calculator/?iframe=true&iftype=evogroup
+calculator_title: Deposit Savings Calculator
 ---
 
-<div>
-    <iframe class="deposit-calc" frameborder="0"
-        src="https://www.ooba.co.za/calculators/home-loan-deposit-saving-calculator/?iframe=true&iftype=evogroup"
-        title="Deposit Savings Calculator"></iframe>
-</div>
+{% include calculator-iframe.html %}

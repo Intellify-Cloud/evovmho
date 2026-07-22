@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Extra Repayment Calculator
+title: Amortisation Calculator
 background: white
+calculator_class: amortisation-calc
+calculator_src: https://www.ooba.co.za/calculators/home-loan-amortisation-calculator?iframe=true&iftype=evogroup
+calculator_title: Amortisation Calculator
 ---
 
-<div>
-    <iframe class="amortisation-calc" frameborder="0"
-        src="https://www.ooba.co.za/calculators/home-loan-amortisation-calculator?iframe=true&iftype=evogroup"
-        title="Extra Repayment Calculator"></iframe>
-</div>
+{% include calculator-iframe.html %}

@@ -1,6 +1,6 @@
 {
     "compile-hero.disable-compile-files-on-did-save-code": false,
     "workbench.iconTheme": "eq-material-theme-icons-darker",
-    "workbench.colorTheme": "Experimental Dark",
+    "workbench.colorTheme": "Dark 2026",
     "workbench.preferredHighContrastLightColorTheme": "Default High Contrast"
 }

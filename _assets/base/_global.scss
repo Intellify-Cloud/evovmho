@@ -1,0 +1,84 @@
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: 1.7;
+  color: $font-color-2;
+  background-color: $body-bg;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba($primary, 0.2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  color: $font-color-1;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: $color-btn-1-hover;
+    text-decoration: underline;
+  }
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: $focus-ring;
+}
+
+.page-section {
+  .section-heading,
+  .section-subheading {
+    text-align: center;
+  }
+
+  .container > .row,
+  .container > div {
+    justify-content: center;
+  }
+
+  .large.text-muted,
+  .text-muted,
+  p,
+  .about-content,
+  .textblock-content,
+  .card-description,
+  .calculator-desc,
+  .about-content .large.text-muted {
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 1.75;
+  }
+
+  .text-left,
+  [class*="col-"] > .text-left {
+    text-align: center !important;
+  }
+}
+
+.page-body {
+  #pagecontainer {
+    padding-top: 150px;
+  }
+}
+
+.post {
+  max-width: 780px;
+  margin: $gap-xl auto 0;
+  padding: 0 1rem;
+}

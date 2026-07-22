@@ -20,6 +20,7 @@ module.exports = {
     entry: './_assets/bundle.js',
     output: {
         filename: 'bundle.js',
+        hashFunction: 'sha256',
         path: path.resolve(__dirname, 'assets')
     },
     module: {
@@ -31,7 +32,6 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    'style-loader',
                     MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader'
@@ -39,11 +39,26 @@ module.exports = {
             },
             {
                 test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: "url-loader?limit=10000&mimetype=application/font-woff"
+                loader: "url-loader",
+                options: {
+                    limit: 10000,
+                    mimetype: "application/font-woff",
+                    name: "webfonts/[name].[ext]"
+                }
             },
             {
-                test: /\.(ttf|eot|svg|jpg|png)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: "file-loader"
+                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: "file-loader",
+                options: {
+                    name: "webfonts/[name].[ext]"
+                }
+            },
+            {
+                test: /\.(jpg|png)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: "file-loader",
+                options: {
+                    name: "img/[name].[ext]"
+                }
             }
         ]
     }

@@ -77,6 +77,77 @@ $shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
 $shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
 
 // ======================================================
+// RESPONSIVE BREAKPOINTS
+// ======================================================
+$breakpoint-mobile: 767.98px;
+$breakpoint-tablet-min: 768px;
+$breakpoint-tablet-max: 991.98px;
+$breakpoint-desktop: 992px;
+$breakpoint-wide: 1400px;
+
+// ======================================================
+// COMPONENT TOKENS
+// ======================================================
+$focus-ring: 0 0 0 3px rgba($color-btn-1, 0.2);
+
+$whatsapp-color: #25D366;
+$whatsapp-color-hover: #20b858;
+$whatsapp-size: 65px;
+$whatsapp-offset: 25px;
+$whatsapp-offset-mobile-bottom: 80px;
+$whatsapp-offset-mobile-right: 20px;
+$whatsapp-tooltip-offset: 80px;
+$whatsapp-tooltip-offset-hover: 75px;
+$whatsapp-tooltip-radius: 6px;
+$whatsapp-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+$whatsapp-shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+$calculator-heights: (
+  bond: 1050px,
+  afford: 1500px,
+  transfer: 1850px,
+  deposit: 1500px,
+  amortisation: 1000px,
+  additional-payment: 1000px
+);
+
+$calculator-heights-mobile: (
+  bond: 1400px,
+  afford: 1800px,
+  transfer: 2700px,
+  deposit: 1800px,
+  amortisation: 1400px,
+  additional-payment: 1800px
+);
+
+$calculator-heights-tablet: (
+  bond: 1200px,
+  afford: 1650px,
+  transfer: 2000px
+);
+
+// ======================================================
+// SEMANTIC COLORS
+// ======================================================
+$color-error: #d32f2f;
+$color-error-bg: #ffebee;
+$color-success: #2e7d32;
+$color-success-bg: #e8f5e9;
+
+// ======================================================
+// Z-INDEX
+// ======================================================
+$z-nav: 1030;
+$z-modal: 1050;
+$z-whatsapp: 1000;
+
+// ======================================================
+// TRANSITIONS
+// ======================================================
+$transition-base: all 0.3s ease;
+$transition-spring: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+// ======================================================
 // BOOTSTRAP OVERRIDES (place these BEFORE importing Bootstrap)
 // ======================================================
 $body-bg:               $bg-color-2;
@@ -105,5 +176,3 @@ $card-box-shadow:       $shadow-md;
 
 // Section heading style (consistent across site)
 $section-heading-color: $font-color-1;
-
-$header-image: "../img/hero.jpg" !default;
