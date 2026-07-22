@@ -8,3 +8,7 @@ _site
 Gemfile.lock
 unused
 bootstrap-reference.html
+
+# Local agent planning notes
+codex-jekyll-refactor-plan.md
+.kilo/plans/*-kilo-jekyll-refactor-plan.md
